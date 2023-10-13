@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>NEDU</title>
+    <link rel="icon" type="image/jpg" href="./icon/favicon.jpg" />
+    <link rel="stylesheet" href="./css/resetcss.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./fontawesome/css/all.css" />
+  </head>
+
+  <body>
+    <div class="root">
+      <nav class="nav_container">
+        <div class="nav_Top">
+          <div class="nav_group">
+            <div class="nav_item logo">
+              <a href="./index.html" alt="Trang chủ"
+                ><img src="./icon/favicon.jpg"
+              /></a>
+            </div>
+            <!--comment-->
+            <ul class="nav_item search">
+              <li>
+                <input
+                  id="search"
+                  style="height: 35px; background-color: #f2f3f5; border: 0px"
+                  type="text"
+                  placeholder="   Tìm kiếm / Mã ID"
+                  size="25"
+                />
+              </li>
+              <li>
+                <label for="search"
+                  ><i
+                    class="fa-solid fa-magnifying-glass"
+                    style="font-size: 20px; margin-left: 3px"
+                  ></i
+                ></label>
+              </li>
+            </ul>
+            <!--comment-->
+          </div>
+          <div class="nav_group">
+            <div class="nav_item-RegLog">
+              <a class="nav_item-RegLog_item log" href="#modal_log">
+                Đăng nhập
+              </a>
+              <a class="nav_item-RegLog_item reg" href="#modal_reg">
+                Đăng ký
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="nav_Bottom">
+          <div class="nav_Bottom_List">
+            <div class="nav_Bottom_item">
+              <a target="_self" href="#modal_intro">Giới thiệu</a>
+            </div>
+            <div class="nav_Bottom_item Giaovien">
+              <a target="_self" href="#">Giáo viên</a>
+            </div>
+            <div class="nav_Bottom_item">
+              <a target="_self" href="#">Thư viện</a>
+            </div>
+            <div class="nav_Bottom_item">
+              <a target="_self" href="#">Hướng dẫn</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main class="main_container">
+        <div class="main_section slidebar">
+          <ul class="main_section slidebar list">
+            <li class="main_section slidebar list-item">
+              Đại học
+              <div class="main_section slidebar list-item hover">dsadsa</div>
+            </li>
+            <li class="main_section slidebar list-item">
+              Luyện thi toán 12
+              <div class="main_section slidebar list-item hover">dsadsa</div>
+            </li>
+            <li class="main_section slidebar list-item">
+              Toán 10 - 11 - 12
+              <div class="main_section slidebar list-item hover">dsadsa</div>
+            </li>
+            <li class="main_section slidebar list-item">
+              Luyện thi toán 9
+              <div class="main_section slidebar list-item hover">dsadsa</div>
+            </li>
+            <li class="main_section slidebar list-item">
+              Toán 6 - 7 - 8 - 9
+              <div class="main_section slidebar list-item hover">dsadsa</div>
+            </li>
+            <div class="main_section slidebar list-item">
+              Toán tiểu học
+              <div class="main_section slidebar list-item hover">dsadsa</div>
+            </div>
+          </ul>
+          <div class="main_section slidebar picture">
+            <img
+              style="width: 1050px; height: 400px"
+              src="./z4493353441291_0de86d662e813f8b8a9967f02ce71e70.jpg "
+              alt="text"
+            />
+          </div>
+        </div>
+        <div class="main_section notification">
+          Ảnh thông báo
+          <div class="">.</div>
+          <div class="">.</div>
+          <div class="">.</div>
+        </div>
+        <div class="main_section product_list">
+          <div class="main_section product-item">
+            <img src="./icon/favicon.jpg" alt="Ảnh lớp học" />
+            <h1>Luyện Toán 12 cùng thầy Trần Xuân Ngọc</h1>
+            <span>30 đang học</span>
+            <div class="product-item btn">Bấm để đăng ký</div>
+          </div>
+          <div class="main_section product-item">dsad</div>
+          <div class="main_section product-item">dsad</div>
+          <div class="main_section product-item">dsad</div>
+          <div class="main_section product-item">dsad</div>
+          <div class="main_section product-item">dsad</div>
+          <div class="main_section product-item">dsad</div>
+          <div class="main_section product-item">dsad</div>
+          <div class="main_section product-item">dsad</div>
+        </div>
+        <div class="main_section guide"></div>
+      </main>
+      <footer class="footer">
+        Thông tin bản quyền, <br />địa chỉ, <br />liên hệ hợp tác<br />facebook<br />mã
+        số thuế<br />....
+      </footer>
+      <div id="modal_log" class="modal">
+        <div class="modal_background"></div>
+        <a class="cancel" href="#"></a>
+        <div class="modal_body">
+          <!-- <a class="close" href="#">&times;</a> -->
+          <div class="modal_body-inner">
+            <p class="modal_body-inner-item">Đăng nhập</p>
+            <p class="modal_body-inner-item question">
+              Bạn mới biết đến NEDU?
+              <a href="#modal_reg">Đăng ký</a>
+            </p>
+            <div class="modal_body-inner-item form">
+              <div class="modal_body-inner-item form-item">
+                <label for="username">Tên đăng nhập:</label
+                ><input type="text" id="username" placeholder="Tên đăng nhập" />
+              </div>
+              <div class="modal_body-inner-item form-item">
+                <label for="pass">Mật khẩu:</label
+                ><input type="password" id="pass" placeholder="Mật khẩu" />
+              </div>
+            </div>
+            <div class="modal_body-inner-item submit">
+              <a style="text-align: center" href="#">Đăng nhập</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_reg" class="modal">
+        <div class="modal_background"></div>
+        <a class="cancel" href="#"></a>
+        <div style="height: 450px" class="modal_body">
+          <div class="modal_body-inner">
+            <p class="modal_body-inner-item">Đăng ký</p>
+            <p class="modal_body-inner-item question">
+              Bạn đã có tài khoản?
+              <a href="#modal_log">Đăng nhập</a>
+            </p>
+            <div class="modal_body-inner-item form">
+              <div class="modal_body-inner-item form-item">
+                <label for="fullname">Họ và Tên:</label
+                ><input type="text" id="fullname" placeholder="Họ và Tên" />
+              </div>
+              <div class="modal_body-inner-item form-item">
+                <label for="phone">Số điện thoại:</label
+                ><input type="tel" id="phone" placeholder="Số điện thoại" />
+              </div>
+              <div class="modal_body-inner-item form-item">
+                <label for="birth">Ngày sinh:</label
+                ><input type="month" id="birth" placeholder="Ngày sinh" />
+              </div>
+              <div class="modal_body-inner-item form-item">
+                <label for="username">Tên đăng nhập:</label
+                ><input type="text" id="username" placeholder="Tên đăng nhập" />
+              </div>
+
+              <div class="modal_body-inner-item form-item">
+                <label for="pass">Mật khẩu:</label
+                ><input type="password" id="pass" placeholder="Mật khẩu" />
+              </div>
+            </div>
+            <div class="modal_body-inner-item submit">
+              <a style="text-align: center" href="#">Đăng ký</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_intro" class="modal">
+        <div class="modal_background"></div>
+        <a class="cancel" href="#"></a>
+        <div class="modal_body">
+          <!-- <a class="close" href="#">&times;</a> -->
+          <div class="modal_body-inner">
+            <p class="modal_body-inner-item">
+              <strong style="color: white">Nền tảng NEDU </strong><br />nền tảng
+              cung cấp chương trình giáo dục trực tuyến hàng đầu Việt Nam dành
+              cho học sinh từ lớp 1 đến lớp 12
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
