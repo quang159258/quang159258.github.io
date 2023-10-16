@@ -242,7 +242,7 @@ html {
 }
 .main_section.slidebar.list {
   padding-top: 10px;
-  flex: 2;
+  flex: 1;
   border: #f2f3f5 solid 3px;
   flex-direction: column;
   position: relative;
@@ -273,7 +273,7 @@ html {
   cursor: default;
 }
 .main_section.slidebar.picture {
-  flex: 8;
+  flex: 7;
   width: 75%;
   height: 100%;
 }
@@ -302,12 +302,20 @@ html {
   flex-direction: column;
   box-shadow: 0px 3px 4px rgba(44, 71, 146, 0.5);
 }
+.product-title {
+  font-size: 1.1rem;
+  padding-top: 5px;
+  text-align: center;
+  font-weight: bold;
+}
 .product-img {
   background-size: cover;
   border-radius: 7px;
   width: 100%;
   padding-top: 100%;
   background-position: center;
+}
+.product-description {
 }
 .footer {
   width: 100%;
