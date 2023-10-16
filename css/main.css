@@ -220,27 +220,37 @@ html {
   line-height: 40px;
 }
 .main_container {
-  margin: 15px 35px;
+  margin: 15px 30px;
   display: flex;
   flex-direction: column;
 }
 .main_section.slidebar {
   width: 100%;
-  margin: 8px 10px;
+  margin: 5px 0px;
   display: flex;
   flex-direction: row;
   background-color: white;
+  flex-wrap: wrap;
+}
+.main_section.slidebar.btn {
+  cursor: pointer;
+  width: 100%;
+  margin: 0px 5px;
+  &:active + .main_section.slidebar.list {
+    display: flex;
+  }
 }
 .main_section.slidebar.list {
-  padding-top: 20px;
+  padding-top: 10px;
   flex: 2;
   border: #f2f3f5 solid 3px;
   flex-direction: column;
   position: relative;
+  display: none;
 }
 .main_section.slidebar.list-item {
+  margin: auto;
   cursor: pointer;
-  margin: 20px 20px;
   margin-right: 0;
   &:hover {
     font-size: 20px;
@@ -282,8 +292,8 @@ html {
 }
 .main_section.product-item {
   margin: 5px 3px;
-  width: 400px;
-  height: 200px;
+  width: 10%;
+  height: 50px;
   border: #ee4d2d solid 2px;
   background-color: bisque;
   display: flex;
