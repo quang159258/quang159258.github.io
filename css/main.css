@@ -148,15 +148,15 @@ html {
   }
 }
 .modal#modal_intro .modal_body {
-  width: 1000px;
-  height: 500px;
+  width: 50%;
+  height: 40%;
   background-image: url(../background_body_modal.jpg);
   background-repeat: no-repeat;
-  background-size: 1000px;
+  background-size: 50%;
 }
 .modal#modal_intro .modal_body-inner {
   text-align: center;
-  font-size: 30px;
+  font-size: 1.5rem;
 }
 .modal_background {
   position: absolute;
@@ -183,7 +183,7 @@ html {
   margin: 10px 0px;
 }
 .modal_body-inner-item.question {
-  font-size: 12px;
+  font-size: 0.8rem;
   margin: 3px;
 }
 .modal_body-inner-item.question a {
@@ -195,7 +195,7 @@ html {
 }
 .modal_body-inner-item.form {
   display: flex;
-  font-size: 16px;
+  font-size: 1rem;
   flex-direction: column;
 }
 .modal_body-inner-item.form-item {
@@ -220,7 +220,7 @@ html {
   line-height: 40px;
 }
 .main_container {
-  margin: 15px 30px;
+  margin: 15px 10px;
   display: flex;
   flex-direction: column;
 }
@@ -236,9 +236,9 @@ html {
   cursor: pointer;
   width: 100%;
   margin: 0px 5px;
-  &:active + .main_section.slidebar.list {
+  /* &:active + .main_section.slidebar.list {
     display: flex;
-  }
+  } */
 }
 .main_section.slidebar.list {
   padding-top: 10px;
@@ -246,7 +246,8 @@ html {
   border: #f2f3f5 solid 3px;
   flex-direction: column;
   position: relative;
-  display: none;
+  display: flex;
+  /* display: none; */
 }
 .main_section.slidebar.list-item {
   margin: auto;
@@ -288,22 +289,25 @@ html {
   min-height: 30%;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
 }
-.main_section.product-item {
-  margin: 5px 3px;
-  width: 10%;
-  height: 50px;
-  border: #ee4d2d solid 2px;
-  background-color: bisque;
+.main_section.product-box {
+  margin: 5px 10px;
+  width: 20%;
+  height: 15%;
+  border-radius: 7px;
+  background-color: white;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 3px 4px rgba(44, 71, 146, 0.5);
 }
-.main_section.product-item img {
-  margin: auto;
-  width: 40%;
-  min-height: auto;
+.product-img {
+  background-size: cover;
+  border-radius: 7px;
+  width: 100%;
+  padding-top: 100%;
+  background-position: center;
 }
 .footer {
   width: 100%;
