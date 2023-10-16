@@ -225,6 +225,7 @@ html {
   flex-direction: column;
 }
 .main_section.slidebar {
+  width: 100%;
   margin: 8px 10px;
   display: flex;
   flex-direction: row;
@@ -250,8 +251,8 @@ html {
 }
 .main_section.slidebar.list-item.hover {
   display: none;
-  width: 700px;
-  height: 350px;
+  width: 200%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 95%;
@@ -262,6 +263,8 @@ html {
 }
 .main_section.slidebar.picture {
   flex: 8;
+  width: 75%;
+  height: 100%;
 }
 .main_section.notification {
   min-width: auto;
