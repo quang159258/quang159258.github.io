@@ -1,5 +1,5 @@
 html {
-  font-size: 15px;
+  font-size: 14px;
   font-family: Montserrat, sans-serif;
   box-sizing: border-box;
 }
@@ -274,9 +274,10 @@ html {
   min-height: 30%;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 .main_section.product-box {
+  cursor: pointer;
   margin: 5px 10px;
   width: 15%;
   height: 12%;
@@ -286,6 +287,7 @@ html {
   flex-direction: column;
   box-shadow: 0px 3px 4px rgba(44, 71, 146, 0.5);
 }
+
 .product-title {
   font-size: 0.9rem;
   padding-top: 5px;
@@ -312,6 +314,26 @@ html {
 .product-status i {
   font-size: 0.9rem;
 }
+.product-btn {
+  align-self: center;
+  width: 50%;
+  height: 30px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  background-color: rgb(104, 174, 254);
+  justify-content: center;
+  display: none;
+}
+.main_section.product-box:hover .product-btn {
+  display: flex;
+}
+.product-btn a {
+  color: white;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  text-decoration: none;
+}
 .footer {
   width: 100%;
   height: 20%;
@@ -325,7 +347,7 @@ html {
 }
 @media screen and (max-width: 767px) {
   html {
-    font-size: 13px;
+    font-size: 12px;
   }
   .main_section.slidebar.picture {
     display: none;
