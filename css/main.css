@@ -274,7 +274,7 @@ html {
   min-height: 30%;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 .main_section.product-box {
   cursor: pointer;
@@ -359,7 +359,7 @@ html {
     display: none;
   }
   .main_section.product-box {
-    width: 28%;
+    width: 40%;
     height: 10%;
   }
 }
