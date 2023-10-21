@@ -208,6 +208,7 @@ html {
   margin: 15px 10px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .main_section.slidebar {
   width: 100%;
@@ -220,45 +221,36 @@ html {
 .main_section.slidebar.btn {
   cursor: pointer;
   width: 100%;
+  font-size: 1.2rem;
+  font-weight: bold;
   margin: 0px 5px;
   /* &:active + .main_section.slidebar.list {
     display: flex;
   } */
 }
 .main_section.slidebar.list {
-  padding-top: 10px;
-  flex: 1;
+  flex: 2;
   border: #f2f3f5 solid 3px;
-  flex-direction: column;
-  position: relative;
+  flex-direction: row;
   display: flex;
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
+  align-items: center;
   /* display: none; */
 }
 .main_section.slidebar.list-item {
+  width: 100%;
+  height: 15%;
+  font-size: 1.2rem;
   margin: auto;
   cursor: pointer;
   font-weight: bold;
-  &:hover {
-    font-size: 1.1rem;
-  }
-  &:hover .main_section.slidebar.list-item.hover {
-    display: block;
-  }
-}
-.main_section.slidebar.list-item.hover {
-  display: none;
-  width: 200%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 95%;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 4px;
-  border: #f2f3f5 solid 3px;
-  cursor: default;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .main_section.slidebar.picture {
-  flex: 7;
+  flex: 6;
   width: 75%;
   height: 100%;
 }
