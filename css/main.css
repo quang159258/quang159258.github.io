@@ -259,6 +259,21 @@ html {
   width: 100%;
   border: #f2f3f5 solid 3px;
   box-shadow: 1px 1px 4px gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.option-title {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  font-weight: 700;
+}
+.option-col {
+  margin: 5px;
+}
+.option-col > a {
+  text-decoration: none;
+  color: #2c3e50;
 }
 .main_section.notification {
   min-width: auto;
@@ -324,6 +339,8 @@ html {
   font-size: 0.85rem;
   text-align: left;
   margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 .product-status {
   display: flex;
@@ -332,6 +349,12 @@ html {
 }
 .product-status i {
   font-size: 0.9rem;
+}
+.product-price {
+  margin: auto;
+  font-size: 1.2rem;
+  color: #ee4d2d;
+  font-weight: 700;
 }
 .product-btn {
   align-self: center;
@@ -350,12 +373,17 @@ html {
   margin: auto;
   text-decoration: none;
 }
-.main_section.guide {
-  min-width: auto;
-  min-height: auto;
+.main_section.new_lesson {
+  width: 100%;
+  min-height: 70px;
   background-image: url(../42.jpg);
   text-align: center;
   box-shadow: 1px 1px 4px gray;
+  display: flex;
+  flex-direction: column;
+  > div {
+    margin: auto;
+  }
 }
 @media screen and (max-width: 767px) {
   html {
