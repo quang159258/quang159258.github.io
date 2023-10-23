@@ -261,13 +261,13 @@ html {
   box-shadow: 1px 1px 4px gray;
 }
 .main_section.notification {
-  margin: 5px;
   min-width: auto;
   min-height: auto;
   background-color: rgba(252, 116, 110, 0.5);
   text-align: center;
   background-image: url(../42.jpg);
   box-shadow: 1px 1px 4px gray;
+  margin: 5px;
 }
 
 .main_section.product_list {
@@ -290,6 +290,8 @@ html {
   box-shadow: 0px 3px 4px rgba(44, 71, 146, 0.5);
   padding-top: 10px;
   padding-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .product-box {
   cursor: pointer;
