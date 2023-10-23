@@ -253,14 +253,27 @@ html {
   flex: 6;
   width: 75%;
   height: 100%;
+  box-shadow: 1px 1px 4px gray;
+}
+.slidebar_selection {
+  width: 100%;
+  border: #f2f3f5 solid 3px;
+  box-shadow: 1px 1px 4px gray;
 }
 .main_section.notification {
+  margin: 5px;
   min-width: auto;
   min-height: auto;
   background-color: rgba(252, 116, 110, 0.5);
   text-align: center;
+  background-image: url(../42.jpg);
+  box-shadow: 1px 1px 4px gray;
 }
+
 .main_section.product_list {
+  margin: 10px 10px;
+}
+.product {
   display: flex;
   width: 100%;
   min-height: 30%;
@@ -268,7 +281,17 @@ html {
   flex-wrap: wrap;
   justify-content: center;
 }
-.main_section.product-box {
+.product-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  width: 100%;
+  min-height: 30px;
+  background-color: #f2f3f5;
+  box-shadow: 0px 3px 4px rgba(44, 71, 146, 0.5);
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.product-box {
   cursor: pointer;
   margin: 5px 10px;
   width: 15%;
@@ -279,8 +302,10 @@ html {
   flex-direction: column;
   box-shadow: 0px 3px 4px rgba(44, 71, 146, 0.5);
 }
-
-.product-title {
+.product-box:hover .product-btn {
+  display: flex;
+}
+.product-box-title {
   font-size: 0.9rem;
   padding-top: 5px;
   text-align: center;
@@ -316,9 +341,6 @@ html {
   justify-content: center;
   display: none;
 }
-.main_section.product-box:hover .product-btn {
-  display: flex;
-}
 .product-btn a {
   color: white;
   text-align: center;
@@ -326,16 +348,12 @@ html {
   margin: auto;
   text-decoration: none;
 }
-.footer {
-  width: 100%;
-  height: 20%;
-  background-color: rgb(104, 174, 254);
-}
 .main_section.guide {
   min-width: auto;
   min-height: auto;
-  background-color: rgba(252, 116, 110, 0.5);
+  background-image: url(../42.jpg);
   text-align: center;
+  box-shadow: 1px 1px 4px gray;
 }
 @media screen and (max-width: 767px) {
   html {
@@ -354,4 +372,9 @@ html {
     width: 40%;
     height: 10%;
   }
+}
+.footer {
+  width: 100%;
+  height: 20%;
+  background-color: rgb(104, 174, 254);
 }
