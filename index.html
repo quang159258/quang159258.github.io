@@ -7,9 +7,30 @@
     <link rel="icon" type="image/jpg" href="./icon/favicon.jpg" />
     <link rel="stylesheet" href="./css/resetcss.css" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
     <link rel="stylesheet" href="./fontawesome/css/all.css" />
   </head>
 
+  <script>
+    function display_selection(id, amount) {
+      var myelement = document.getElementById(id);
+      var check = 0;
+      for (i = 1; i <= amount; i++) {
+        var id1 = "selection" + i;
+        myelement = document.getElementById(id1);
+        if (window.getComputedStyle(myelement).display === "flex") {
+          myelement.style.display = "none";
+          if (id1 == id) check = 1;
+        }
+      }
+      myelement = document.getElementById(id);
+      if (window.getComputedStyle(myelement).display === "none" && check == 0) {
+        myelement.style.display = "flex";
+      } else {
+        myelement.style.display = "none";
+      }
+    }
+  </script>
   <body>
     <div class="root">
       <nav class="nav_container">
@@ -54,10 +75,10 @@
         <div class="nav_Bottom">
           <div class="nav_Bottom_List">
             <div class="nav_Bottom_item">
-              <a target="_self" href="#product-list">Khóa học</a>
+              <a target="_self" href="#product-list./index.html ">Khóa học</a>
             </div>
             <div class="nav_Bottom_item Giaovien">
-              <a target="_self" href="#">Giáo viên</a>
+              <a target="_self" href="./Giaovien.html">Giáo viên</a>
             </div>
             <div class="nav_Bottom_item">
               <a target="_self" href="#">Thư viện</a>
@@ -81,30 +102,48 @@
             <i class="fa-solid fa-bars"></i> Khóa học
           </div>
           <ul class="main_section slidebar list">
-            <li class="main_section slidebar list-item">
+            <li
+              class="main_section slidebar list-item"
+              onclick="display_selection('selection1',6)"
+            >
               <div>Đại học</div>
               <i class="fa-solid fa-caret-down"></i>
             </li>
-            <li class="main_section slidebar list-item">
+            <li
+              onclick="display_selection('selection2',6)"
+              class="main_section slidebar list-item"
+            >
               <div>Luyện thi toán 12</div>
               <i class="fa-solid fa-caret-down"></i>
             </li>
-            <li class="main_section slidebar list-item">
+            <li
+              class="main_section slidebar list-item"
+              onclick="display_selection('selection3',6)"
+            >
               <div>Toán 10 - 11 - 12</div>
               <i class="fa-solid fa-caret-down"></i>
             </li>
-            <li class="main_section slidebar list-item">
+            <li
+              class="main_section slidebar list-item"
+              onclick="display_selection('selection4',6)"
+            >
               <div>Luyện thi toán 9</div>
               <i class="fa-solid fa-caret-down"></i>
             </li>
-            <li class="main_section slidebar list-item">
+            <li
+              class="main_section slidebar list-item"
+              onclick="display_selection('selection5',6)"
+            >
               <div>Toán 6 - 7 - 8 - 9</div>
               <i class="fa-solid fa-caret-down"></i>
             </li>
-            <div class="main_section slidebar list-item">
+            <li
+              class="main_section slidebar list-item"
+              onclick="display_selection('selection6',6)"
+            >
               <div>Sách Toán ID</div>
               <i class="fa-solid fa-caret-down"></i>
-            </div>
+            </li>
           </ul>
           <img
             class="main_section slidebar picture"
@@ -112,9 +151,145 @@
             alt="text"
           />
         </div>
-        <div class="slidebar_selection">
+
+        <div id="selection1" class="slidebar_selection">
           <div class="option-row">
-            <div class="option-title">Căn bản</div>
+            <div class="option-title">Căn bản111</div>
+            <div class="option-col">
+              <a href="#" target="_self">Danh sách bài học</a>
+            </div>
+            <div class="option-col">
+              <a href="#" target="_self">Danh sách video bài giảng</a>
+            </div>
+          </div>
+          <div class="option-row">
+            <div class="option-title">Nâng cao</div>
+            <div class="option-col">
+              <a href="#" target="_self">Danh sách bài học</a>
+            </div>
+            <div class="option-col">
+              <a href="#" target="_self">Danh sách video bài giảng</a>
+            </div>
+          </div>
+          <div class="option-row">
+            <div class="option-title">Giải bài tập SGK</div>
+            <div class="option-col">
+              <a href="#" target="_self">Danh sách video bài giải</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="selection6" class="slidebar_selection">
+          <div class="option-row">
+            <div class="option-title">Căn bản666</div>
+            <div class="option-col">
+              <a href="#" target="_self">Danh sách bài học</a>
+            </div>
+            <div class="option-col">
+              <a href="#" target="_self">Danh sách video bài giảng</a>
+            </div>
+          </div>
+          <div class="option-row">
+            <div class="option-title">Nâng cao</div>
+            <div class="option-col">
+              <a href="#" target="_self">Danh sách bài học</a>
+            </div>
+            <div class="option-col">
+              <a href="#" target="_self">Danh sách video bài giảng</a>
+            </div>
+          </div>
+          <div class="option-row">
+            <div class="option-title">Giải bài tập SGK</div>
+            <div class="option-col">
+              <a href="#" target="_self">Danh sách video bài giải</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="selection5" class="slidebar_selection">
+          <div class="option-row">
+            <div class="option-title">Căn bản555</div>
+            <div class="option-col">
+              <a href="#" target="_self">Danh sách bài học</a>
+            </div>
+            <div class="option-col">
+              <a href="#" target="_self">Danh sách video bài giảng</a>
+            </div>
+          </div>
+          <div class="option-row">
+            <div class="option-title">Nâng cao</div>
+            <div class="option-col">
+              <a href="#" target="_self">Danh sách bài học</a>
+            </div>
+            <div class="option-col">
+              <a href="#" target="_self">Danh sách video bài giảng</a>
+            </div>
+          </div>
+          <div class="option-row">
+            <div class="option-title">Giải bài tập SGK</div>
+            <div class="option-col">
+              <a href="#" target="_self">Danh sách video bài giải</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="selection4" class="slidebar_selection">
+          <div class="option-row">
+            <div class="option-title">Căn bản444</div>
+            <div class="option-col">
+              <a href="#" target="_self">Danh sách bài học</a>
+            </div>
+            <div class="option-col">
+              <a href="#" target="_self">Danh sách video bài giảng</a>
+            </div>
+          </div>
+          <div class="option-row">
+            <div class="option-title">Nâng cao</div>
+            <div class="option-col">
+              <a href="#" target="_self">Danh sách bài học</a>
+            </div>
+            <div class="option-col">
+              <a href="#" target="_self">Danh sách video bài giảng</a>
+            </div>
+          </div>
+          <div class="option-row">
+            <div class="option-title">Giải bài tập SGK</div>
+            <div class="option-col">
+              <a href="#" target="_self">Danh sách video bài giải</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="selection3" class="slidebar_selection">
+          <div class="option-row">
+            <div class="option-title">Căn bản333</div>
+            <div class="option-col">
+              <a href="#" target="_self">Danh sách bài học</a>
+            </div>
+            <div class="option-col">
+              <a href="#" target="_self">Danh sách video bài giảng</a>
+            </div>
+          </div>
+          <div class="option-row">
+            <div class="option-title">Nâng cao</div>
+            <div class="option-col">
+              <a href="#" target="_self">Danh sách bài học</a>
+            </div>
+            <div class="option-col">
+              <a href="#" target="_self">Danh sách video bài giảng</a>
+            </div>
+          </div>
+          <div class="option-row">
+            <div class="option-title">Giải bài tập SGK</div>
+            <div class="option-col">
+              <a href="#" target="_self">Danh sách video bài giải</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="selection2" class="slidebar_selection">
+          <div class="option-row">
+            <div class="option-title">Căn bản222</div>
             <div class="option-col">
               <a href="#" target="_self">Danh sách bài học</a>
             </div>
@@ -429,7 +604,8 @@
             </div>
           </div>
         </div>
-        <div id="new_lesson" class="main_section new_lesson">
+        <div class="main_section new_lesson"></div>
+        <div id="Intro" class="main_section intro">
           <div class="option-title">Giáo viên tại NEDU</div>
           <div>
             Đội ngũ giáo viên trình độ cao, cung cấp kiến thức trên Website,

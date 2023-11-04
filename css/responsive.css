@@ -1,0 +1,18 @@
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 12px;
+  }
+  .main_section.slidebar.picture {
+    display: none;
+  }
+  #search {
+    display: none;
+  }
+  .fa-solid.fa-magnifying-glass {
+    display: none;
+  }
+  .product-box {
+    width: 40%;
+    height: 10%;
+  }
+}

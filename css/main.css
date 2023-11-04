@@ -262,6 +262,7 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  display: none;
 }
 .option-title {
   font-size: 1.3rem;
@@ -373,7 +374,7 @@ html {
   margin: auto;
   text-decoration: none;
 }
-.main_section.new_lesson {
+.main_section.intro {
   width: 100%;
   min-height: 70px;
   background-image: url(../42.jpg);
@@ -383,24 +384,6 @@ html {
   flex-direction: column;
   > div {
     margin: auto;
-  }
-}
-@media screen and (max-width: 767px) {
-  html {
-    font-size: 12px;
-  }
-  .main_section.slidebar.picture {
-    display: none;
-  }
-  #search {
-    display: none;
-  }
-  .fa-solid.fa-magnifying-glass {
-    display: none;
-  }
-  .product-box {
-    width: 40%;
-    height: 10%;
   }
 }
 .footer {
