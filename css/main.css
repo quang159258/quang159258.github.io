@@ -212,7 +212,6 @@ html {
 }
 .main_section.slidebar {
   width: 100%;
-  min-height: 15%;
   margin: 5px 0px;
   display: flex;
   flex-direction: row;
