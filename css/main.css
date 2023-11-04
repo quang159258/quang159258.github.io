@@ -212,6 +212,7 @@ html {
 }
 .main_section.slidebar {
   width: 100%;
+  min-height: 15%;
   margin: 5px 0px;
   display: flex;
   flex-direction: row;
@@ -229,14 +230,13 @@ html {
   } */
 }
 .main_section.slidebar.list {
-  flex: 2;
+  flex: 3;
   border: #f2f3f5 solid 3px;
   flex-direction: row;
   display: flex;
   padding-inline-start: 10px;
   padding-inline-end: 10px;
   align-items: center;
-  /* display: none; */
 }
 .main_section.slidebar.list-item {
   width: 100%;
@@ -250,8 +250,8 @@ html {
   align-items: center;
 }
 .main_section.slidebar.picture {
-  flex: 6;
-  width: 75%;
+  flex: 4;
+  width: 50%;
   height: 100%;
   box-shadow: 1px 1px 4px gray;
 }

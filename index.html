@@ -12,6 +12,14 @@
   </head>
 
   <script>
+    function ShowSlidebar(id) {
+      var myelement = document.getElementById(id);
+      if (window.getComputedStyle(myelement).display === "none") {
+        myelement.style.display = "flex";
+      } else {
+        myelement.style.display = "none";
+      }
+    }
     function display_selection(id, amount) {
       var myelement = document.getElementById(id);
       var check = 0;
@@ -98,60 +106,66 @@
           <div class="">.</div>
         </div>
         <div class="main_section slidebar">
-          <div class="main_section slidebar btn">
-            <i class="fa-solid fa-bars"></i> Khóa học
+          <div
+            class="main_section slidebar btn"
+            onclick="ShowSlidebar('slidebar-item')"
+          >
+            <i class="fa-solid fa-bars"></i>
+            Khóa học
           </div>
-          <ul class="main_section slidebar list">
-            <li
-              class="main_section slidebar list-item"
-              onclick="display_selection('selection1',6)"
-            >
-              <div>Đại học</div>
-              <i class="fa-solid fa-caret-down"></i>
-            </li>
-            <li
-              onclick="display_selection('selection2',6)"
-              class="main_section slidebar list-item"
-            >
-              <div>Luyện thi toán 12</div>
-              <i class="fa-solid fa-caret-down"></i>
-            </li>
-            <li
-              class="main_section slidebar list-item"
-              onclick="display_selection('selection3',6)"
-            >
-              <div>Toán 10 - 11 - 12</div>
-              <i class="fa-solid fa-caret-down"></i>
-            </li>
-            <li
-              class="main_section slidebar list-item"
-              onclick="display_selection('selection4',6)"
-            >
-              <div>Luyện thi toán 9</div>
-              <i class="fa-solid fa-caret-down"></i>
-            </li>
-            <li
-              class="main_section slidebar list-item"
-              onclick="display_selection('selection5',6)"
-            >
-              <div>Toán 6 - 7 - 8 - 9</div>
-              <i class="fa-solid fa-caret-down"></i>
-            </li>
-            <li
-              class="main_section slidebar list-item"
-              onclick="display_selection('selection6',6)"
-            >
-              <div>Sách Toán ID</div>
-              <i class="fa-solid fa-caret-down"></i>
-            </li>
-          </ul>
-          <img
-            class="main_section slidebar picture"
-            src="./z4493353441291_0de86d662e813f8b8a9967f02ce71e70.jpg "
-            alt="text"
-          />
+          <div id="slidebar-item" style="display: flex; flex-direction: cloumn">
+            <div class="main_section slidebar list">
+              <div
+                class="main_section slidebar list-item"
+                onclick="display_selection('selection1',6)"
+              >
+                <div>Đại học</div>
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+              <div
+                onclick="display_selection('selection2',6)"
+                class="main_section slidebar list-item"
+              >
+                <div>Luyện thi toán 12</div>
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+              <div
+                class="main_section slidebar list-item"
+                onclick="display_selection('selection3',6)"
+              >
+                <div>Toán 10 - 11 - 12</div>
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+              <div
+                class="main_section slidebar list-item"
+                onclick="display_selection('selection4',6)"
+              >
+                <div>Luyện thi toán 9</div>
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+              <div
+                class="main_section slidebar list-item"
+                onclick="display_selection('selection5',6)"
+              >
+                <div>Toán 6 - 7 - 8 - 9</div>
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+              <div
+                class="main_section slidebar list-item"
+                onclick="display_selection('selection6',6)"
+              >
+                <div>Sách Toán ID</div>
+                <i class="fa-solid fa-caret-down"></i>
+              </div>
+            </div>
+            <div id="Nothing" style="flex: 2"></div>
+            <img
+              class="main_section slidebar picture"
+              src="./z4493353441291_0de86d662e813f8b8a9967f02ce71e70.jpg "
+              alt="text"
+            />
+          </div>
         </div>
-
         <div id="selection1" class="slidebar_selection">
           <div class="option-row">
             <div class="option-title">Căn bản111</div>
