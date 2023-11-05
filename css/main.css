@@ -230,12 +230,13 @@ html {
 }
 .main_section.slidebar.list {
   flex: 3;
-  border: #f2f3f5 solid 3px;
+  box-shadow: 1px 1px 4px gray;
   flex-direction: row;
   display: flex;
   padding-inline-start: 10px;
   padding-inline-end: 10px;
   align-items: center;
+  margin-bottom: 0;
 }
 .main_section.slidebar.list-item {
   width: 100%;
@@ -251,25 +252,35 @@ html {
 .main_section.slidebar.picture {
   flex: 4;
   width: 50%;
-  height: 100%;
+  height: auto;
   box-shadow: 1px 1px 4px gray;
+  margin-bottom: 0;
 }
 .slidebar_selection {
+  margin: 8px 0;
   width: 100%;
   border: #f2f3f5 solid 3px;
   box-shadow: 1px 1px 4px gray;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   display: none;
 }
+.option-row {
+  margin: 0 auto;
+  width: 25%;
+}
 .option-title {
+  padding-top: 4px;
   font-size: 1.3rem;
   color: #2c3e50;
   font-weight: 700;
+  margin: 0 auto;
 }
+
 .option-col {
-  margin: 5px;
+  margin: 5px auto;
 }
 .option-col > a {
   text-decoration: none;
@@ -280,7 +291,7 @@ html {
   min-height: auto;
   background-color: rgba(252, 116, 110, 0.5);
   text-align: center;
-  background-image: url(../42.jpg);
+  background-image: url(../Resoucre/42.jpg);
   box-shadow: 1px 1px 4px gray;
   margin: 5px;
 }
@@ -376,7 +387,7 @@ html {
 .main_section.intro {
   width: 100%;
   min-height: 70px;
-  background-image: url(../42.jpg);
+  background-image: url(../Resoucre//42.jpg);
   text-align: center;
   box-shadow: 1px 1px 4px gray;
   display: flex;
