@@ -5,7 +5,7 @@ function ShowSlidebar(id) {
   } else {
     myelement.style.display = "none";
   }
-  for (i = 1; i <= 6; i++) {
+  for (i = 1; i <= 5; i++) {
     var id1 = "selection" + i;
     myelement = document.getElementById(id1);
     if (window.getComputedStyle(myelement).display === "flex") {
@@ -37,3 +37,4 @@ function Link_index(id) {
     window.location.href = "index.html"; // Điều hướng đến trang index.html
   });
 }
+function Print_Product(title, teacher, student, rate, price) {}

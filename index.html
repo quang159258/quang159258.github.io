@@ -5,703 +5,175 @@
     <meta charset="UTF-8" />
     <title>NEDU</title>
     <link rel="icon" type="image/jpg" href="./icon/favicon.jpg" />
-    <link rel="stylesheet" href="./css/resetcss.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
     <link rel="stylesheet" href="./fontawesome/css/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
 
   <script src="./JS/script.js"></script>
-  <body>
-    <div class="root">
-      <nav class="nav_container">
-        <div class="nav_Top">
-          <div class="nav_group">
-            <div class="nav_item logo">
-              <a href="./index.html" alt="Trang chủ"
-                ><img src="./icon/favicon.jpg"
-              /></a>
-            </div>
-            <!--comment-->
-            <ul class="nav_item search">
-              <li>
-                <input
-                  id="search"
-                  style="height: 35px; background-color: #f2f3f5; border: 0px"
-                  type="text"
-                  placeholder="   Tìm kiếm / Mã ID"
-                  size="25"
-                />
-              </li>
-              <li>
-                <label for="search"
-                  ><i
-                    class="fa-solid fa-magnifying-glass"
-                    style="font-size: 1.5rem; margin-left: 3px"
-                  ></i
-                ></label>
-              </li>
-            </ul>
-            <!--comment-->
-          </div>
-          <div class="nav_group">
-            <div class="nav_item-RegLog">
-              <a class="nav_item-RegLog_item log" href="#modal_log"> Login </a>
-              <a class="nav_item-RegLog_item reg" href="#modal_reg">
-                Sign up
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="nav_Bottom">
-          <div class="nav_Bottom_List">
-            <div class="nav_Bottom_item">
-              <a target="_self" href="#product-list">Khóa học</a>
-            </div>
-            <div class="nav_Bottom_item Giaovien">
-              <a target="_self" href="./HTML/Giaovien.html">Giáo viên</a>
-            </div>
-            <div class="nav_Bottom_item">
-              <a target="_self" href="#">Thư viện</a>
-            </div>
-            <div class="nav_Bottom_item">
-              <a target="_self" href="#guide">Hướng dẫn</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <main class="main_container">
-        <div class="main_section notification">
-          <div class="">.</div>
-          <div class="">.</div>
-          <div class="">Ảnh thông báo</div>
-          <div class="">.</div>
-          <div class="">.</div>
-        </div>
-        <div class="main_section slidebar">
-          <div
-            class="main_section slidebar btn"
-            onclick="ShowSlidebar('slidebar-item')"
+  <body class="bg-light">
+    <nav
+      class="navbar navbar-expand-sm bg-white navbar-dark fixed-top border border-bottom shadow"
+    >
+      <a class="navbar-brand" href="#">
+        <img src="./icon/favicon.jpg" alt="logo" style="width: 40px" />
+      </a>
+      <form class="form-inline" action="#">
+        <input
+          class="form-control mr-sm-2"
+          type="text"
+          placeholder="Tìm kiếm"
+        />
+        <button class="btn btn-success" type="submit">Tìm kiếm</button>
+      </form>
+      <div class="ml-auto" style="margin-right: 2%">
+        <button
+          type="button"
+          class="btn btn-primary"
+          style="font-weight: bold; border-radius: 15px"
+        >
+          Tham gia
+        </button>
+      </div>
+    </nav>
+    <nav
+      class="navbar navbar-expand-sm bg-primary justify-content-center navbar-dark rounded"
+      style="margin-top: 60px"
+    >
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#"
+            ><i class="fa-solid fa-house p-1"></i>Trang chủ</a
           >
-            <i class="fa-solid fa-bars"></i>
-            Khóa học
-          </div>
-          <div id="slidebar-item" style="display: flex; flex-direction: cloumn">
-            <div class="main_section slidebar list">
-              <div
-                class="main_section slidebar list-item"
-                onclick="display_selection('selection1',6)"
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#"
+            ><i class="fa-solid fa-book p-1"></i>Sách ID</a
+          >
+        </li>
+        <li class="nav-item active">
+          <a
+            class="nav-link"
+            href="https://www.facebook.com/profile.php?id=100094273371228"
+            target="_blank"
+            ><i class="fa-brands fa-facebook-messenger p-1"></i>Hỗ trợ</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="container-fluid" style="margin-top: 8px">
+      <div class="row" style="padding: 0 12px">
+        <div class="col-1"></div>
+        <div class="col border-3 rounded">
+          <ul
+            class="nav flex-column justify-content-around align-items-start"
+            style="height: 100%; font-weight: bold"
+          >
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i
+                  class="fa-solid fa-layer-group"
+                  style="color: #10316a; margin-right: 5px"
+                ></i
+                >Luyện thi Đại học</a
               >
-                <div>Đại học</div>
-                <i class="fa-solid fa-caret-down"></i>
-              </div>
-              <div
-                onclick="display_selection('selection2',6)"
-                class="main_section slidebar list-item"
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i
+                  class="fa-solid fa-layer-group"
+                  style="color: #10316a; margin-right: 5px"
+                ></i
+                >Lớp 10 - 11 - 12</a
               >
-                <div>Luyện thi toán 12</div>
-                <i class="fa-solid fa-caret-down"></i>
-              </div>
-              <div
-                class="main_section slidebar list-item"
-                onclick="display_selection('selection3',6)"
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i
+                  class="fa-solid fa-layer-group"
+                  style="color: #10316a; margin-right: 5px"
+                ></i
+                >Luyện thi vào 10</a
               >
-                <div>Toán 10 - 11 - 12</div>
-                <i class="fa-solid fa-caret-down"></i>
-              </div>
-              <div
-                class="main_section slidebar list-item"
-                onclick="display_selection('selection4',6)"
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i
+                  class="fa-solid fa-layer-group"
+                  style="color: #10316a; margin-right: 5px"
+                ></i
+                >Lớp 6 - 7 - 8 - 9</a
               >
-                <div>Luyện thi toán 9</div>
-                <i class="fa-solid fa-caret-down"></i>
-              </div>
-              <div
-                class="main_section slidebar list-item"
-                onclick="display_selection('selection5',6)"
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i
+                  class="fa-solid fa-layer-group"
+                  style="color: #10316a; margin-right: 5px"
+                ></i
+                >Lớp 1 - 2 - 3 - 4 - 5</a
               >
-                <div>Toán 6 - 7 - 8 - 9</div>
-                <i class="fa-solid fa-caret-down"></i>
-              </div>
-              <div
-                class="main_section slidebar list-item"
-                onclick="display_selection('selection6',6)"
-              >
-                <div>Sách Toán ID</div>
-                <i class="fa-solid fa-caret-down"></i>
-              </div>
-            </div>
-            <div id="Nothing" style="flex: 2"></div>
-            <img
-              class="main_section slidebar picture"
-              src="./Resoucre/z4493353441291_0de86d662e813f8b8a9967f02ce71e70.jpg "
-              alt="text"
-            />
-          </div>
+            </li>
+          </ul>
         </div>
-        <div id="selection1" class="slidebar_selection">
-          <div class="option-row">
-            <div class="option-title">Đại số tuyến tính</div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách bài học</a>
-            </div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách video bài giảng</a>
-            </div>
-            <div class="option-col">
-              <a href="#" target="_self">Bài tập giải</a>
-            </div>
-          </div>
+        <div class="col-6">
+          <div id="demo" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+            </ul>
 
-          <div class="option-row">
-            <div class="option-title">Xác suất thống kê</div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách bài học</a>
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="img-fluid" src="./Resoucre/ThongBao.png" alt="" />
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="img-fluid"
+                  src="https://scontent.fsgn8-4.fna.fbcdn.net/v/t39.30808-6/401603485_193602420458869_3821335606344157272_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=783fdb&_nc_ohc=wBpWFFw8ZscAX81Im9h&_nc_ht=scontent.fsgn8-4.fna&oh=00_AfDPzYt2P5qSzCQXtdyOKONq_Zyeo3lKOSymbNsueNFxMQ&oe=65740E2D"
+                  alt=""
+                />
+              </div>
             </div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách video bài giảng</a>
-            </div>
-            <div class="option-col">
-              <a href="#" target="_self">Bài tập giải</a>
-            </div>
-          </div>
-          <div class="option-row">
-            <div class="option-title">Giải tích</div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách video bài giải</a>
-            </div>
-          </div>
-        </div>
 
-        <div id="selection6" class="slidebar_selection">
-          <div class="option-row">
-            <div class="option-title">Căn bản666</div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách bài học</a>
-            </div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách video bài giảng</a>
-            </div>
-          </div>
-          <div class="option-row">
-            <div class="option-title">Nâng cao</div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách bài học</a>
-            </div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách video bài giảng</a>
-            </div>
-          </div>
-          <div class="option-row">
-            <div class="option-title">Giải bài tập SGK</div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách video bài giải</a>
-            </div>
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
           </div>
         </div>
-
-        <div id="selection5" class="slidebar_selection">
-          <div class="option-row">
-            <div class="option-title">Căn bản555</div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách bài học</a>
+        <div class="col row">
+          <div
+            class="container-fluid border-3 rounded d-flex align-items-center flex-column"
+          >
+            <div>
+              <img
+                src="https://scontent.fsgn8-4.fna.fbcdn.net/v/t39.30808-6/407949658_205056969313414_1713192803978109912_n.jpg?stp=dst-jpg_p843x403&_nc_cat=109&ccb=1-7&_nc_sid=3635dc&_nc_ohc=QGaGfM-UpJMAX-eWvL-&_nc_ht=scontent.fsgn8-4.fna&oh=00_AfARJmFGuFCbgvTqw73bSy3LrTmzVGTBuGXrDGPwL_vgcA&oe=6574ABFC"
+                class="img-fluid"
+                alt=""
+              />
             </div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách video bài giảng</a>
-            </div>
-          </div>
-          <div class="option-row">
-            <div class="option-title">Nâng cao</div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách bài học</a>
-            </div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách video bài giảng</a>
-            </div>
-          </div>
-          <div class="option-row">
-            <div class="option-title">Giải bài tập SGK</div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách video bài giải</a>
-            </div>
+            <div class="mt-auto mb-3 p-2 btn btn-primary">Tư vấn thêm</div>
           </div>
         </div>
-
-        <div id="selection4" class="slidebar_selection">
-          <div class="option-row">
-            <div class="option-title">Căn bản444</div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách bài học</a>
-            </div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách video bài giảng</a>
-            </div>
-          </div>
-          <div class="option-row">
-            <div class="option-title">Nâng cao</div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách bài học</a>
-            </div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách video bài giảng</a>
-            </div>
-          </div>
-          <div class="option-row">
-            <div class="option-title">Giải bài tập SGK</div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách video bài giải</a>
-            </div>
-          </div>
-        </div>
-
-        <div id="selection3" class="slidebar_selection">
-          <div class="option-row">
-            <div class="option-title">Căn bản333</div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách bài học</a>
-            </div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách video bài giảng</a>
-            </div>
-          </div>
-          <div class="option-row">
-            <div class="option-title">Nâng cao</div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách bài học</a>
-            </div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách video bài giảng</a>
-            </div>
-          </div>
-          <div class="option-row">
-            <div class="option-title">Giải bài tập SGK</div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách video bài giải</a>
-            </div>
-          </div>
-        </div>
-
-        <div id="selection2" class="slidebar_selection">
-          <div class="option-row">
-            <div class="option-title">Căn bản222</div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách bài học</a>
-            </div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách video bài giảng</a>
-            </div>
-          </div>
-          <div class="option-row">
-            <div class="option-title">Nâng cao</div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách bài học</a>
-            </div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách video bài giảng</a>
-            </div>
-          </div>
-          <div class="option-row">
-            <div class="option-title">Giải bài tập SGK</div>
-            <div class="option-col">
-              <a href="#" target="_self">Danh sách video bài giải</a>
-            </div>
-          </div>
-        </div>
-        <div id="product-list" class="main_section product_list">
-          <div class="product">
-            <div class="product-title">
-              <i class="fa-solid fa-list"></i>Luyện thi toán 12
-            </div>
-            <div class="product-box">
-              <div
-                class="product-img"
-                style="background-image: url(./icon/favicon.jpg)"
-              ></div>
-              <div class="product-box-title">
-                Luyện Toán 12 cùng thầy Trần Xuân Ngọc
-              </div>
-              <div class="product-description">
-                <div class="product-teacher">
-                  Giáo viên:
-                  <a href="#" class="product-link giaovien">Trần Xuân Ngọc</a>
-                </div>
-                <div class="product-status">
-                  <div class="product-rate">
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i>
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i>30
-                  </div>
-                  <div class="product-mem">
-                    30<i class="fa-solid fa-user"></i>
-                  </div>
-                </div>
-                <div class="product-price">199.000 VNĐ</div>
-              </div>
-              <div class="product-btn">
-                <a href="#" target="_self">Học ngay</a>
-              </div>
-            </div>
-            <div class="product-box">
-              <div
-                class="product-img"
-                style="background-image: url(./icon/favicon.jpg)"
-              ></div>
-              <div class="product-box-title">
-                Luyện Toán 12 cùng thầy Trần Xuân Ngọc
-              </div>
-              <div class="product-description">
-                <div class="product-teacher">
-                  Giáo viên:
-                  <a href="#" class="product-link giaovien">Trần Xuân Ngọc</a>
-                </div>
-                <div class="product-status">
-                  <div class="product-rate">
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i>
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i>30
-                  </div>
-                  <div class="product-mem">
-                    30<i class="fa-solid fa-user"></i>
-                  </div>
-                </div>
-                <div class="product-price">199.000 VNĐ</div>
-              </div>
-              <div class="product-btn">
-                <a href="#" target="_self">Học ngay</a>
-              </div>
-            </div>
-            <div class="product-box">
-              <div
-                class="product-img"
-                style="background-image: url(./icon/favicon.jpg)"
-              ></div>
-              <div class="product-box-title">
-                Luyện Toán 12 cùng thầy Trần Xuân Ngọc
-              </div>
-              <div class="product-description">
-                <div class="product-teacher">
-                  Giáo viên:
-                  <a href="#" class="product-link giaovien">Trần Xuân Ngọc</a>
-                </div>
-                <div class="product-status">
-                  <div class="product-rate">
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i>
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i>30
-                  </div>
-                  <div class="product-mem">
-                    30<i class="fa-solid fa-user"></i>
-                  </div>
-                </div>
-                <div class="product-price">199.000 VNĐ</div>
-              </div>
-              <div class="product-btn">
-                <a href="#" target="_self">Học ngay</a>
-              </div>
-            </div>
-            <div class="product-box">
-              <div
-                class="product-img"
-                style="background-image: url(./icon/favicon.jpg)"
-              ></div>
-              <div class="product-box-title">
-                Luyện Toán 12 cùng thầy Trần Xuân Ngọc
-              </div>
-              <div class="product-description">
-                <div class="product-teacher">
-                  Giáo viên:
-                  <a href="#" class="product-link giaovien">Trần Xuân Ngọc</a>
-                </div>
-                <div class="product-status">
-                  <div class="product-rate">
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i>
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i>30
-                  </div>
-                  <div class="product-mem">
-                    30<i class="fa-solid fa-user"></i>
-                  </div>
-                </div>
-                <div class="product-price">199.000 VNĐ</div>
-              </div>
-              <div class="product-btn">
-                <a href="#" target="_self">Học ngay</a>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <div class="product-title">
-              <i class="fa-solid fa-list"></i>Luyện thi toán 9
-            </div>
-            <div class="product-box">
-              <div
-                class="product-img"
-                style="background-image: url(./icon/favicon.jpg)"
-              ></div>
-              <div class="product-box-title">
-                Luyện Toán 12 cùng thầy Trần Xuân Ngọc
-              </div>
-              <div class="product-description">
-                <div class="product-teacher">
-                  Giáo viên:
-                  <a href="#" class="product-link giaovien">Trần Xuân Ngọc</a>
-                </div>
-                <div class="product-status">
-                  <div class="product-rate">
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i>
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i>30
-                  </div>
-                  <div class="product-mem">
-                    30<i class="fa-solid fa-user"></i>
-                  </div>
-                </div>
-                <div class="product-price">199.000 VNĐ</div>
-              </div>
-              <div class="product-btn">
-                <a href="#" target="_self">Học ngay</a>
-              </div>
-            </div>
-            <div class="product-box">
-              <div
-                class="product-img"
-                style="background-image: url(./icon/favicon.jpg)"
-              ></div>
-              <div class="product-box-title">
-                Luyện Toán 12 cùng thầy Trần Xuân Ngọc
-              </div>
-              <div class="product-description">
-                <div class="product-teacher">
-                  Giáo viên:
-                  <a href="#" class="product-link giaovien">Trần Xuân Ngọc</a>
-                </div>
-                <div class="product-status">
-                  <div class="product-rate">
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i>
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i>30
-                  </div>
-                  <div class="product-mem">
-                    30<i class="fa-solid fa-user"></i>
-                  </div>
-                </div>
-                <div class="product-price">199.000 VNĐ</div>
-              </div>
-              <div class="product-btn">
-                <a href="#" target="_self">Học ngay</a>
-              </div>
-            </div>
-            <div class="product-box">
-              <div
-                class="product-img"
-                style="background-image: url(./icon/favicon.jpg)"
-              ></div>
-              <div class="product-box-title">
-                Luyện Toán 12 cùng thầy Trần Xuân Ngọc
-              </div>
-              <div class="product-description">
-                <div class="product-teacher">
-                  Giáo viên:
-                  <a href="#" class="product-link giaovien">Trần Xuân Ngọc</a>
-                </div>
-                <div class="product-status">
-                  <div class="product-rate">
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i>
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i>30
-                  </div>
-                  <div class="product-mem">
-                    30<i class="fa-solid fa-user"></i>
-                  </div>
-                </div>
-                <div class="product-price">199.000 VNĐ</div>
-              </div>
-              <div class="product-btn">
-                <a href="#" target="_self">Học ngay</a>
-              </div>
-            </div>
-            <div class="product-box">
-              <div
-                class="product-img"
-                style="background-image: url(./icon/favicon.jpg)"
-              ></div>
-              <div class="product-box-title">
-                Luyện Toán 12 cùng thầy Trần Xuân Ngọc
-              </div>
-              <div class="product-description">
-                <div class="product-teacher">
-                  Giáo viên:
-                  <a href="#" class="product-link giaovien">Trần Xuân Ngọc</a>
-                </div>
-                <div class="product-status">
-                  <div class="product-rate">
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i>
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i>30
-                  </div>
-                  <div class="product-mem">
-                    30<i class="fa-solid fa-user"></i>
-                  </div>
-                </div>
-                <div class="product-price">199.000 VNĐ</div>
-              </div>
-              <div class="product-btn">
-                <a href="#" target="_self">Học ngay</a>
-              </div>
-            </div>
-            <div class="product-box">
-              <div
-                class="product-img"
-                style="background-image: url(./icon/favicon.jpg)"
-              ></div>
-              <div class="product-box-title">
-                Luyện Toán 12 cùng thầy Trần Xuân Ngọc
-              </div>
-              <div class="product-description">
-                <div class="product-teacher">
-                  Giáo viên:
-                  <a href="#" class="product-link giaovien">Trần Xuân Ngọc</a>
-                </div>
-                <div class="product-status">
-                  <div class="product-rate">
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i>
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i
-                    ><i class="fa-solid fa-star" style="color: #ffd43b"></i>30
-                  </div>
-                  <div class="product-mem">
-                    30<i class="fa-solid fa-user"></i>
-                  </div>
-                </div>
-                <div class="product-price">199.000 VNĐ</div>
-              </div>
-              <div class="product-btn">
-                <a href="#" target="_self">Học ngay</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="main_section new_lesson"></div>
-        <div id="Intro" class="main_section intro">
-          <div class="option-title">Giáo viên tại NEDU</div>
-          <div>
-            Đội ngũ giáo viên trình độ cao, cung cấp kiến thức trên Website,
-            Youtube, Facebook,..
-          </div>
-        </div>
-      </main>
-      <footer class="footer">
-        Thông tin bản quyền, <br />địa chỉ, <br />liên hệ hợp tác<br />facebook<br />mã
-        số thuế<br />....
-      </footer>
-      <div id="modal_log" class="modal">
-        <div class="modal_background"></div>
-        <a class="cancel" href="#"></a>
-        <div class="modal_body">
-          <!-- <a class="close" href="#">&times;</a> -->
-          <div class="modal_body-inner">
-            <p class="modal_body-inner-item">Đăng nhập</p>
-            <p class="modal_body-inner-item question">
-              Bạn mới biết đến NEDU?
-              <a href="#modal_reg">Đăng ký</a>
-            </p>
-            <div class="modal_body-inner-item form">
-              <div class="modal_body-inner-item form-item">
-                <label for="username">Tên đăng nhập:</label
-                ><input type="text" id="username" placeholder="Tên đăng nhập" />
-              </div>
-              <div class="modal_body-inner-item form-item">
-                <label for="pass">Mật khẩu:</label
-                ><input type="password" id="pass" placeholder="Mật khẩu" />
-              </div>
-            </div>
-            <div class="modal_body-inner-item submit">
-              <a style="text-align: center" href="#">Đăng nhập</a>
-            </div>
-          </div>
-        </div>
+        <div class="col-1"></div>
       </div>
-      <div id="modal_reg" class="modal">
-        <div class="modal_background"></div>
-        <a class="cancel" href="#"></a>
-        <div style="height: 450px" class="modal_body">
-          <div class="modal_body-inner">
-            <p class="modal_body-inner-item">Đăng ký</p>
-            <p class="modal_body-inner-item question">
-              Bạn đã có tài khoản?
-              <a href="#modal_log">Đăng nhập</a>
-            </p>
-            <div class="modal_body-inner-item form">
-              <div class="modal_body-inner-item form-item">
-                <label for="fullname">Họ và Tên:</label
-                ><input
-                  required
-                  type="text"
-                  id="fullname"
-                  placeholder="Họ và Tên"
-                />
-              </div>
-              <div class="modal_body-inner-item form-item">
-                <label for="phone">Số điện thoại:</label
-                ><input
-                  required
-                  type="tel"
-                  id="phone"
-                  placeholder="Số điện thoại"
-                />
-              </div>
-              <div class="modal_body-inner-item form-item">
-                <label for="birth">Ngày sinh:</label
-                ><input
-                  required
-                  type="month"
-                  id="birth"
-                  placeholder="Ngày sinh"
-                />
-              </div>
-              <div class="modal_body-inner-item form-item">
-                <label for="username">Tên đăng nhập:</label
-                ><input
-                  required
-                  type="text"
-                  id="username"
-                  placeholder="Tên đăng nhập"
-                />
-              </div>
-
-              <div class="modal_body-inner-item form-item">
-                <label for="pass">Mật khẩu:</label
-                ><input
-                  required
-                  type="password"
-                  id="pass"
-                  placeholder="Mật khẩu"
-                />
-              </div>
-            </div>
-            <div class="modal_body-inner-item submit">
-              <a style="text-align: center" href="#">Đăng ký</a>
-            </div>
-          </div>
-        </div>
-      </div>
+    </div>
+    <div style="height: 1000px"></div>
+    <div class="jumbotron text-center" style="margin-bottom: 0">
+      <p>Footer</p>
     </div>
   </body>
 </html>
