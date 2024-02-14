@@ -6,7 +6,71 @@
   min-height: 100px;
   margin: 10px 10px;
 }
+#nav {
+  height: 100px;
+}
 .carousel-item img {
-  object-fit: cover;
+  object-fit: contain;
   object-position: 0 -350px;
+}
+#carouselIntroduction {
+  height: 500px;
+}
+#btn {
+  position: absolute;
+  min-width: 20px;
+  min-height: 20px;
+  z-index: 10;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 575.98px) {
+  /* CSS áp dụng cho điện thoại di động */
+  #nav {
+    height: 50px;
+  }
+  .carousel-item img {
+    object-fit: contain;
+    object-position: 0 0;
+  }
+  #carouselIntroduction {
+    height: 200px;
+  }
+  @media (orientation: landscape) {
+    .carousel-item img {
+      object-fit: contain;
+      object-position: 0 -100px;
+    }
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* CSS áp dụng cho máy tính bảng */
+  .carousel-item img {
+    object-fit: contain;
+    object-position: 0 -100px;
+  }
+  #carouselIntroduction {
+    height: 300px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* CSS áp dụng cho máy tính xách tay và máy tính bảng lớn */
+  .carousel-item img {
+    object-fit: contain;
+    object-position: 0 -200px;
+  }
+  #carouselIntroduction {
+    height: 300px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* CSS áp dụng cho máy tính cá nhân */
+  .carousel-item img {
+    object-fit: contain;
+    object-position: 0 -200px;
+  }
+}
+@media (min-width: 1200px) {
+  /* CSS áp dụng cho máy tính cá nhân và màn hình lớn */
 }

@@ -19,14 +19,15 @@
   </head>
   <body>
     <div
+      id="nav"
       class="container-fluid bg-primary"
-      style="height: 100px; box-shadow: 0px 2px 8px"
+      style="box-shadow: 0px 2px 8px"
     ></div>
-    <div class="root container-md mt-2">
-      <div class="container-fluid" style="height: 500px">
+    <div class="root container-lg mt-2" style="height: 1000px">
+      <div class="container-fluid">
         <div
           id="carouselIntroduction"
-          class="carousel slide h-100"
+          class="carousel slide"
           data-bs-ride="carousel"
         >
           <div class="carousel-indicators">
@@ -51,17 +52,7 @@
               aria-label="Slide 3"
             ></button>
           </div>
-          <div
-            style="
-              position: absolute;
-              min-width: 20px;
-              min-height: 20px;
-              z-index: 10;
-              bottom: 20%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-            "
-          >
+          <div id="btn">
             <button type="button" class="btn btn-danger btn-lg">
               Đăng ký ngay
             </button>
