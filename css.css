@@ -1,3 +1,6 @@
+.body {
+  font-size: 16px;
+}
 .title {
   text-align: center;
 }
@@ -8,6 +11,8 @@
 }
 #nav {
   height: 100px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.15);
 }
 .carousel-item img {
   object-fit: contain;
@@ -43,9 +48,15 @@
       object-position: 0 -100px;
     }
   }
+  .body {
+    font-size: 14px;
+  }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
   /* CSS áp dụng cho máy tính bảng */
+  .body {
+    font-size: 14px;
+  }
   .carousel-item img {
     object-fit: contain;
     object-position: 0 -100px;
