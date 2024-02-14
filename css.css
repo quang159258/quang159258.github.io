@@ -7,6 +7,6 @@
   margin: 10px 10px;
 }
 .carousel-item img {
-  object-fit: contain;
-  object-position: 0px -70%;
+  object-fit: cover;
+  object-position: 0 -350px;
 }
