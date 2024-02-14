@@ -8,5 +8,5 @@
 }
 .carousel-item img {
   object-fit: contain;
-  object-position: 0px -350px;
+  object-position: 0px 70%;
 }
