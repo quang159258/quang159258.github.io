@@ -1,4 +1,4 @@
-.body {
+:root {
   font-size: 16px;
 }
 .title {
@@ -10,7 +10,7 @@
   margin: 10px 10px;
 }
 #nav {
-  height: 100px;
+  height: 60px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15),
     inset 0 -1px 0 rgba(255, 255, 255, 0.15);
 }
@@ -30,11 +30,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+#text {
+  width: 70%;
+}
 @media (max-width: 575.98px) {
   /* CSS áp dụng cho điện thoại di động */
-  #nav {
-    height: 50px;
-  }
   .carousel-item img {
     object-fit: contain;
     object-position: 0 0;
@@ -48,14 +48,14 @@
       object-position: 0 -100px;
     }
   }
-  .body {
-    font-size: 14px;
+  :root {
+    font-size: 12px;
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
   /* CSS áp dụng cho máy tính bảng */
-  .body {
-    font-size: 14px;
+  :root {
+    font-size: 12px;
   }
   .carousel-item img {
     object-fit: contain;
@@ -67,6 +67,9 @@
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
   /* CSS áp dụng cho máy tính xách tay và máy tính bảng lớn */
+  :root {
+    font-size: 14px;
+  }
   .carousel-item img {
     object-fit: contain;
     object-position: 0 -200px;

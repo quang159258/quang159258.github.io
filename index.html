@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
-    <title>Toán Thầy Ngọc</title>
+    <title>Toán NEDU - Luyện thi Toán</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,10 +18,32 @@
     <link href="./css.css" rel="stylesheet" />
   </head>
   <body>
-    <div id="nav" class="container-fluid bg-primary"></div>
+    <nav
+      id="nav"
+      class="navbar navbar-expand-sm bg-light navbar-dark fixed-top p-0 d-flex flex-row justify-content-between"
+      style="
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+          rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      "
+    >
+      <div class="position-relative" style="width: 28%; height: 100%">
+        <img
+          class="d-block position-absolute"
+          style="right: 0px"
+          src="./icon/favicon.jpg"
+          width="60"
+        />
+      </div>
+      <div id="text" class="h-100 d-flex flex-column my-auto">
+        <p class="m-0">Trung tâm luyện thi Nedu</p>
+        <p class="m-0">
+          523/23A Tùng Thiện Vương, Phường 12, Quận 8, TP. Hồ Chí Minh
+        </p>
+      </div>
+    </nav>
     <div
       id="Carousel"
-      class="container-lg"
+      class="container-fluid"
       style="height: 1000px; padding: 0 0"
     >
       <div class="w-100">
@@ -116,6 +138,12 @@
       </div>
       <div class="w-100" style="height: 300px"></div>
     </div>
-    <script></script>
+    <script>
+      {
+        var element = document.getElementById("Carousel");
+        var nav = document.getElementById("nav");
+        element.style.marginTop = nav.offsetHeight + "px";
+      }
+    </script>
   </body>
 </html>
