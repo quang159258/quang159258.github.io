@@ -1,0 +1,12 @@
+.title {
+  text-align: center;
+}
+.frame {
+  border: 2px solid black;
+  min-height: 100px;
+  margin: 10px 10px;
+}
+.carousel-item img {
+  object-fit: contain;
+  object-position: 0px -350px;
+}

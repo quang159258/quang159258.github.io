@@ -3,177 +3,120 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
-    <title>NEDU</title>
-    <link rel="icon" type="image/jpg" href="./icon/favicon.jpg" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/responsive.css" />
-    <link rel="stylesheet" href="./fontawesome/css/all.css" />
+    <title>Toán Thầy Ngọc</title>
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
     />
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link href="./css.css" rel="stylesheet" />
   </head>
-
-  <script src="./JS/script.js"></script>
-  <body class="bg-light">
-    <nav
-      class="navbar navbar-expand-sm bg-white navbar-dark fixed-top border border-bottom shadow"
-    >
-      <a class="navbar-brand" href="#">
-        <img src="./icon/favicon.jpg" alt="logo" style="width: 40px" />
-      </a>
-      <form class="form-inline" action="#">
-        <input
-          class="form-control mr-sm-2"
-          type="text"
-          placeholder="Tìm kiếm"
-        />
-        <button class="btn btn-success" type="submit">Tìm kiếm</button>
-      </form>
-      <div class="ml-auto" style="margin-right: 2%">
-        <button
-          type="button"
-          class="btn btn-primary"
-          style="font-weight: bold; border-radius: 15px"
+  <body>
+    <div
+      class="container-fluid bg-primary"
+      style="height: 100px; box-shadow: 0px 2px 8px"
+    ></div>
+    <div class="root container-md mt-2">
+      <div class="container-fluid" style="height: 500px">
+        <div
+          id="carouselIntroduction"
+          class="carousel slide h-100"
+          data-bs-ride="carousel"
         >
-          Tham gia
-        </button>
-      </div>
-    </nav>
-    <nav
-      class="navbar navbar-expand-sm bg-primary justify-content-center navbar-dark rounded"
-      style="margin-top: 60px"
-    >
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#"
-            ><i class="fa-solid fa-house p-1"></i>Trang chủ</a
-          >
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#"
-            ><i class="fa-solid fa-book p-1"></i>Sách ID</a
-          >
-        </li>
-        <li class="nav-item active">
-          <a
-            class="nav-link"
-            href="https://www.facebook.com/profile.php?id=100094273371228"
-            target="_blank"
-            ><i class="fa-brands fa-facebook-messenger p-1"></i>Hỗ trợ</a
-          >
-        </li>
-      </ul>
-    </nav>
-    <div class="container-fluid" style="margin-top: 8px">
-      <div class="row" style="padding: 0 12px">
-        <div class="col-1"></div>
-        <div class="col border-3 rounded">
-          <ul
-            class="nav flex-column justify-content-around align-items-start"
-            style="height: 100%; font-weight: bold"
-          >
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i
-                  class="fa-solid fa-layer-group"
-                  style="color: #10316a; margin-right: 5px"
-                ></i
-                >Luyện thi Đại học</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"
-                ><i
-                  class="fa-solid fa-layer-group"
-                  style="color: #10316a; margin-right: 5px"
-                ></i
-                >Lớp 10 - 11 - 12</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"
-                ><i
-                  class="fa-solid fa-layer-group"
-                  style="color: #10316a; margin-right: 5px"
-                ></i
-                >Luyện thi vào 10</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"
-                ><i
-                  class="fa-solid fa-layer-group"
-                  style="color: #10316a; margin-right: 5px"
-                ></i
-                >Lớp 6 - 7 - 8 - 9</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"
-                ><i
-                  class="fa-solid fa-layer-group"
-                  style="color: #10316a; margin-right: 5px"
-                ></i
-                >Lớp 1 - 2 - 3 - 4 - 5</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="col-6">
-          <div id="demo" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ul class="carousel-indicators">
-              <li data-target="#demo" data-slide-to="0" class="active"></li>
-              <li data-target="#demo" data-slide-to="1"></li>
-            </ul>
-
-            <!-- The slideshow -->
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="img-fluid" src="./Resoucre/ThongBao.png" alt="" />
-              </div>
-              <div class="carousel-item">
-                <img
-                  class="img-fluid"
-                  src="https://scontent.fsgn8-4.fna.fbcdn.net/v/t39.30808-6/401603485_193602420458869_3821335606344157272_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=783fdb&_nc_ohc=wBpWFFw8ZscAX81Im9h&_nc_ht=scontent.fsgn8-4.fna&oh=00_AfDPzYt2P5qSzCQXtdyOKONq_Zyeo3lKOSymbNsueNFxMQ&oe=65740E2D"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <!-- Left and right controls -->
-            <a class="carousel-control-prev" href="#demo" data-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#demo" data-slide="next">
-              <span class="carousel-control-next-icon"></span>
-            </a>
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselIntroduction"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselIntroduction"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselIntroduction"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
           </div>
-        </div>
-        <div class="col row">
           <div
-            class="container-fluid border-3 rounded d-flex align-items-center flex-column"
+            style="
+              position: absolute;
+              min-width: 20px;
+              min-height: 20px;
+              z-index: 10;
+              bottom: 20%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            "
           >
-            <div>
+            <button type="button" class="btn btn-danger btn-lg">
+              Đăng ký ngay
+            </button>
+          </div>
+          <div class="carousel-inner h-100">
+            <div class="carousel-item active">
               <img
-                src="https://scontent.fsgn8-4.fna.fbcdn.net/v/t39.30808-6/407949658_205056969313414_1713192803978109912_n.jpg?stp=dst-jpg_p843x403&_nc_cat=109&ccb=1-7&_nc_sid=3635dc&_nc_ohc=QGaGfM-UpJMAX-eWvL-&_nc_ht=scontent.fsgn8-4.fna&oh=00_AfARJmFGuFCbgvTqw73bSy3LrTmzVGTBuGXrDGPwL_vgcA&oe=6574ABFC"
-                class="img-fluid"
-                alt=""
+                src="./z5140154741327_d40fc3aa1ada27e33a0f35a60398b3d4.jpg"
+                class="w-100 border rounded"
+                alt="..."
               />
             </div>
-            <div class="mt-auto mb-3 p-2 btn btn-primary">Tư vấn thêm</div>
+            <div class="carousel-item">
+              <img
+                src="./z5140154741822_db0a87cd565a4a2ab9efbe66e269d100.jpg"
+                class="w-100 border rounded"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./z5140154743531_a10ce6a9181a85b49901ce4dcf398b76.jpg"
+                class="w-100 border rounded"
+                alt="..."
+              />
+            </div>
           </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselIntroduction"
+            data-bs-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon"
+              aria-hidden="true"
+              style="border: 2px solid white"
+            ></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselIntroduction"
+            data-bs-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon"
+              aria-hidden="true"
+              style="border: 2px solid white"
+            ></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <div class="col-1"></div>
       </div>
-    </div>
-    <div style="height: 1000px"></div>
-    <div class="jumbotron text-center" style="margin-bottom: 0">
-      <p>Footer</p>
     </div>
   </body>
 </html>

@@ -1,3 +1,11 @@
 .border-3 {
   border: 3px solid #dee2e6;
 }
+.statistics {
+  background-image: url(../Resoucre/NOFI.png);
+  min-height: 100px;
+}
+.title {
+  font-size: 2.2rem;
+  font-weight: bolder;
+}
