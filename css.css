@@ -26,6 +26,41 @@
 #text {
   width: 70%;
 }
+.team-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 5px;
+}
+.team-item {
+  position: relative;
+  padding: 0 0;
+  margin: 0 5px;
+  box-shadow: 0 3px 10px #00000000;
+  border-radius: 5px;
+}
+.team-item::before,
+.team-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px #00000000;
+  transition: 0.5s;
+  z-index: -1;
+}
+.team-item:hover::before {
+  transform: rotate(10deg);
+}
+.team-item:hover::after {
+  transform: rotate(20deg);
+}
+
 @media (max-width: 575.98px) {
   /* CSS áp dụng cho điện thoại di động */
   .carousel-item img {
