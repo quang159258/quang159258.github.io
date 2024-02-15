@@ -1,18 +1,11 @@
 :root {
   font-size: 16px;
 }
-.title {
-  text-align: center;
-}
-.frame {
-  border: 2px solid black;
-  min-height: 100px;
-  margin: 10px 10px;
-}
+
 #nav {
-  height: 60px;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.15);
+  min-height: 60px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 .carousel-item img {
   object-fit: contain;
