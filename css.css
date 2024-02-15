@@ -1,7 +1,9 @@
 :root {
   font-size: 16px;
 }
-
+body {
+  overflow-x: hidden;
+}
 #nav {
   min-height: 60px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
@@ -35,7 +37,7 @@
 .team-item {
   position: relative;
   padding: 0 0;
-  margin: 0 5px;
+  margin: 5px 5px;
   box-shadow: 0 3px 10px #00000000;
   border-radius: 5px;
 }
