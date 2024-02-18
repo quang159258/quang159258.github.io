@@ -4,18 +4,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
     <title>Toán NEDU - Luyện thi Toán</title>
+    <link rel="icon" type="image/x-icon" href="./icon/favicon.jpg" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link href="./css.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Shade&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./csss.css" rel="stylesheet" />
+    <link href="./fontawesome/css/all.min.css" rel="stylesheet" />
   </head>
-  <body style="background-color: #f0f2f5">
+  <body style="background-color: #ffff">
     <nav
       id="nav"
-      class="navbar navbar-expand-sm bg-light navbar-dark fixed-top p-0 d-flex flex-row justify-content-between"
+      class="navbar navbar-expand-sm navbar-dark fixed-top p-0 d-flex flex-row justify-content-between"
+      style="background-color: white"
     >
       <div style="width: 28%; height: 100%">
         <img
@@ -62,13 +71,20 @@
             ></button>
           </div>
           <div id="btn">
-            <button type="button" class="btn btn-danger btn-lg">
+            <a
+              role="button"
+              class="btn btn-danger btn-lg vibrate-1"
+              href="https://m.me/100094273371228"
+              target="_blank"
+            >
               Đăng ký ngay
-            </button>
+            </a>
           </div>
           <div
             class="carousel-inner h-100"
             style="
+              -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                rgba(0, 0, 0, 0.23) 0px 3px 6px;
               box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
                 rgba(0, 0, 0, 0.23) 0px 3px 6px;
             "
@@ -122,32 +138,38 @@
       </div>
       <div
         class="container-md mt-5"
-        id="team-container"
         style="min-height: 100px; position: relative"
       >
-        <h3 class="title fw-bold">ĐỘI NGŨ GIÁO VIÊN</h3>
+        <h1 class="title fw-bold bungee-shade-regular" style="color: #db2535">
+          GIÁO VIÊN TOÁN
+        </h1>
         <div class="h-100 row justify-content-center">
-          <div
-            class="col-md-4 col-9 col-sm-4 mx-auto team-item order-2 order-md-1 order-sm-1 mb-3"
-          >
-            <div class="img-container">
-              <img
-                src="./z5161320777011_3d3815f0cf169439b6d634c0405ec228.jpg"
-              />
-            </div>
-          </div>
-          <div
-            class="col-md-4 col-9 col-sm-4 mx-auto team-item order-1 order-md-2 order-sm-2 mb-3"
-          >
+          <div class="col-md-6 col-9 col-sm-6 mx-auto team-item mb-3">
             <div class="img-container">
               <img
                 src="./z5161320777012_679a7d271448c377c38d0f35c3e143f5.jpg"
               />
             </div>
           </div>
-          <div
-            class="col-md-4 col-9 col-sm-4 mx-auto team-item order-3 order-md-3 order-sm-3 mb-3"
-          >
+        </div>
+      </div>
+      <div
+        class="container-md mt-5"
+        style="min-height: 100px; position: relative"
+      >
+        <h1 class="title fw-bold bungee-shade-regular" style="color: #db2535">
+          ĐỘI NGŨ TRỢ GIẢNG
+        </h1>
+        <div class="h-100 row justify-content-center">
+          <div class="col-md-5 col-9 col-sm-5 mx-auto team-item mb-3">
+            <div class="img-container">
+              <img
+                src="./z5161320777011_3d3815f0cf169439b6d634c0405ec228.jpg"
+              />
+            </div>
+          </div>
+
+          <div class="col-md-5 col-9 col-sm-5 mx-auto team-item mb-3">
             <div class="img-container">
               <img
                 src="./z5161320773046_6dd3899f04359556bd63ffe6192151da.jpg"
@@ -157,11 +179,423 @@
         </div>
       </div>
       <div
-        id="Archievement"
-        class="container-fluid mt-5 pt-3"
-        style="min-height: 100px; background-color: #216999"
+        style="
+          height: 15px;
+          width: 100%;
+          background-image: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            from(#f0f2f5),
+            to(#e8717c)
+          );
+          background-image: -o-linear-gradient(#f0f2f5, #e8717c);
+          background-image: linear-gradient(#f0f2f5, #e8717c);
+        "
+      ></div>
+      <div
+        id="Why"
+        class="container-fluid m-0 why-container"
+        style="
+          min-height: 300px;
+          background-size: contain;
+          background-image: url(./background1.avif);
+          position: relative;
+        "
       >
-        <h3 class="title text-white fw-bold">Thành tựu</h3>
+        <div class="container-md row mx-auto pt-3">
+          <h2
+            style="
+              color: #e5db9d;
+              margin-bottom: 30px;
+              text-align: center;
+              text-shadow: 2px 0 #0f2bbd, -2px 0 #0f2bbd, 0 2px #0f2bbd,
+                0 -2px #0f2bbd, 1px 1px #0f2bbd, -1px -1px #0f2bbd,
+                1px -1px #0f2bbd, -1px 1px #0f2bbd;
+              z-index: 2;
+            "
+          >
+            TẠI SAO HỌC SINH TIN TƯỞNG KHÓA HỌC TOÁN THẦY NGỌC?
+          </h2>
+          <div class="col-md-5 col-9 col-sm-5 mx-auto bg-white box-item">
+            <div class="box-icon">
+              <i class="fa-solid fa-chalkboard-user"></i>
+            </div>
+            <h4 class="box-title">
+              Giáo viên kinh nghiệm và trình độ chuyên môn cao
+            </h4>
+            <ul>
+              <li>Thạc sĩ chuyên ngành Toán trường ĐH Quốc Gia TP HCM.</li>
+              <li>Cử nhân Sư Phạm Toán ĐH Sư Phạm TP HCM.</li>
+              <li>
+                Đạt giải nhì kỳ thi học sinh giỏi Toán cấp tỉnh Lâm Đồng năm
+                2012.
+              </li>
+              <li>
+                Tham gia viết các cuốn sách luyên thi "Top 1" THPT Quốc Gia.
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-5 col-9 col-sm-5 mx-auto bg-white box-item">
+            <div class="box-icon"><i class="fa-solid fa-timeline"></i></div>
+            <h4 class="box-title">Lộ trình học phù hợp với từng học sinh</h4>
+            <ul>
+              <li>Định hướng và ôn tập theo từng giai đoạn cụ thể.</li>
+              <li>Bám sát lộ trình ôn thi THPT Quốc gia.</li>
+            </ul>
+          </div>
+          <div class="col-md-5 col-9 col-sm-5 mx-auto bg-white box-item">
+            <div class="box-icon"><i class="fa-solid fa-book-open"></i></div>
+            <h4 class="box-title">Hệ thống học liệu chất lượng và hiện đại</h4>
+            <ul>
+              <li>
+                Hệ thống bài giảng và video chất lượng, tài liệu được Giáo viên
+                biên soạn chi tiết, tỉ mỉ với phương pháp học nắm chắc bản chất.
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-5 col-9 col-sm-5 mx-auto bg-white box-item">
+            <div class="box-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <h4 class="box-title">Địa chỉ</h4>
+            <ul>
+              <li>523/23A Tùng Thiện Vương, P12, Q8, TP HCM.</li>
+              <li>
+                Địa chỉ học thuận tiện, gần các trường Võ Văn Kiệt, Trần Khai
+                Nguyên, Hùng Vương, Tạ Quang Bửu, Lương Văn Can, Tùng Thiện
+                Vương.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-100"
+        style="
+          height: 25px;
+          background-image: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            from(#e8717c),
+            to(#fffaf2)
+          );
+          background-image: -o-linear-gradient(#e8717c, #fffaf2);
+          background-image: linear-gradient(#e8717c, #fffaf2);
+        "
+      ></div>
+      <div class="w-100">
+        <img class="img-fluid" src="./LichHoc.jpg" />
+      </div>
+      <div
+        class="w-100"
+        style="
+          height: 25px;
+          background-image: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            from(#fffaf2),
+            to(#3c9ad5)
+          );
+          background-image: -o-linear-gradient(#fffaf2, #3c9ad5);
+          background-image: linear-gradient(#fffaf2, #3c9ad5);
+        "
+      ></div>
+      <div
+        id="Archievement"
+        class="container-fluid pt-3"
+        style="
+          min-height: 100px;
+          background-size: cover;
+          background-image: url(./background2.avif);
+        "
+      >
+        <h1 class="title fw-bold bungee-shade-regular" style="color: #e5db9d">
+          THÀNH TÍCH
+        </h1>
+        <div class="w-100 row">
+          <div class="col-md-5 col-9 col-sm-5 mb-3 mx-auto">
+            <div
+              id="carouselArchieve1"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselArchieve1"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselArchieve1"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselArchieve1"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div
+                class="carousel-inner h-100"
+                style="
+                  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                "
+              >
+                <div class="carousel-item active">
+                  <div class="frameborder">
+                    <div class="frame">
+                      <img src="./Archieve1/1.jpg" class="image" />
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="frameborder">
+                    <div class="frame">
+                      <img src="./Archieve1/2.jpg" class="image" />
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="frameborder">
+                    <div class="frame">
+                      <img src="./Archieve1/3.jpg" class="image" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselArchieve1"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                  style="border: 2px solid white"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselArchieve1"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                  style="border: 2px solid white"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <div class="col-md-5 col-9 col-sm-5 mb-3 mx-auto">
+            <div
+              id="carouselArchieve3"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselArchieve3"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselArchieve3"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselArchieve3"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div
+                class="carousel-inner h-100"
+                style="
+                  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                "
+              >
+                <div class="carousel-item active">
+                  <div class="frameborder">
+                    <div class="frame">
+                      <img src="./Archieve3/1.png" class="image" />
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="frameborder">
+                    <div class="frame">
+                      <img src="./Archieve3/2.png" class="image" />
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="frameborder">
+                    <div class="frame">
+                      <img src="./Archieve3/3.png" class="image" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselArchieve3"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                  style="border: 2px solid white"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselArchieve3"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                  style="border: 2px solid white"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <div class="col-md-5 col-9 col-sm-5 mb-3 mx-auto">
+            <div
+              id="carouselArchieve2"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselArchieve2"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselArchieve2"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselArchieve2"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button
+                ><button
+                  type="button"
+                  data-bs-target="#carouselArchieve2"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+                ></button>
+              </div>
+
+              <div
+                class="carousel-inner h-100"
+                style="
+                  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                "
+              >
+                <div class="carousel-item active">
+                  <div class="frameborder">
+                    <div class="frame">
+                      <img src="./Archieve2/1.jpg" class="image" />
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="frameborder">
+                    <div class="frame">
+                      <img src="./Archieve2/2.jpg" class="image" />
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="frameborder">
+                    <div class="frame">
+                      <img src="./Archieve2/3.jpg" class="image" />
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="frameborder">
+                    <div class="frame">
+                      <img src="./Archieve2/4.jpg" class="image" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselArchieve2"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                  style="border: 2px solid white"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselArchieve2"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                  style="border: 2px solid white"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-100 text-light"
+        style="min-height: 30px; background-color: #0673b8; text-align: center"
+      >
+        Copyright © 2024 Nguyễn Trần Quang
       </div>
     </div>
     <script>
