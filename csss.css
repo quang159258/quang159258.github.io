@@ -271,6 +271,9 @@ body {
 #bookcontainer {
   height: 500px;
 }
+#bookcontainer p {
+  font-size: 2rem;
+}
 @media (max-width: 575.98px) {
   /* CSS áp dụng cho điện thoại di động */
   #carouselIntroduction .carousel-item img {
@@ -283,8 +286,9 @@ body {
     height: 200px;
   }
   #bookcontainer {
-    height: 130px;
+    height: 160px;
   }
+
   @media (orientation: landscape) {
     #carouselIntroduction .carousel-item img {
       -o-object-fit: contain;
@@ -295,14 +299,17 @@ body {
     #bookcontainer {
       height: 200px;
     }
-    :root {
-      font-size: 12px;
-    }
+  }
+  body {
+    font-size: 12px;
+  }
+  #bookcontainer p {
+    font-size: 1rem;
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
   /* CSS áp dụng cho máy tính bảng */
-  :root {
+  body {
     font-size: 12px;
   }
   #carouselIntroduction .carousel-item img {
@@ -320,7 +327,7 @@ body {
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
   /* CSS áp dụng cho máy tính xách tay và máy tính bảng lớn */
-  :root {
+  body {
     font-size: 14px;
   }
   #carouselIntroduction .carousel-item img {
