@@ -268,6 +268,9 @@ body {
   -ms-transform: translate(50%, 50%);
   transform: translate(50%, 50%);
 }
+#bookcontainer {
+  height: 500px;
+}
 @media (max-width: 575.98px) {
   /* CSS áp dụng cho điện thoại di động */
   #carouselIntroduction .carousel-item img {
@@ -279,6 +282,9 @@ body {
   #carouselIntroduction {
     height: 200px;
   }
+  #bookcontainer {
+    height: 130px;
+  }
   @media (orientation: landscape) {
     #carouselIntroduction .carousel-item img {
       -o-object-fit: contain;
@@ -286,9 +292,12 @@ body {
       -o-object-position: 0 -100px;
       object-position: 0 -100px;
     }
-  }
-  :root {
-    font-size: 12px;
+    #bookcontainer {
+      height: 200px;
+    }
+    :root {
+      font-size: 12px;
+    }
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -305,6 +314,9 @@ body {
   #carouselIntroduction {
     height: 300px;
   }
+  #bookcontainer {
+    height: 280px;
+  }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
   /* CSS áp dụng cho máy tính xách tay và máy tính bảng lớn */
@@ -320,6 +332,9 @@ body {
   #carouselIntroduction {
     height: 300px;
   }
+  #bookcontainer {
+    height: 350px;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
   /* CSS áp dụng cho máy tính cá nhân */
@@ -328,6 +343,9 @@ body {
     object-fit: contain;
     -o-object-position: 0 -200px;
     object-position: 0 -200px;
+  }
+  #bookcontainer {
+    height: 400px;
   }
 }
 @media (min-width: 1200px) {
