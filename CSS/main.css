@@ -215,6 +215,9 @@ a {
   font-weight: 600;
   font-size: 1rem;
 }
+.fc-timeGridWeek-view.fc-view.fc-timegrid .fc-scroller {
+  overflow-x: auto; /* Hiển thị thanh cuộn ngang */
+}
 .fc-event-time {
   font-weight: 550;
   font-size: 1rem;
@@ -222,12 +225,15 @@ a {
 .fc-scrollgrid.fc-scrollgrid-liquid {
   min-width: 700px !important;
 }
+.fc-scroller.fc-scroller-liquid-absolute {
+  overflow-y: hidden !important;
+}
 .fc-timeGridWeek-view.fc-view.fc-timegrid {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  -ms-overflow-style: auto; /* Cho phép hiển thị thanh cuộn trong IE và Edge */
+  scrollbar-width: auto; /* Cho phép hiển thị thanh cuộn trong Firefox */
 }
 .fc-timeGridWeek-view.fc-view.fc-timegrid::-webkit-scrollbar {
-  display: none;
+  /* Xóa bỏ thuộc tính này để hiển thị thanh cuộn trong Webkit (Chrome, Safari) */
 }
 #calendar {
   min-height: 200px;
