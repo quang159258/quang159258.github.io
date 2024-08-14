@@ -199,6 +199,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 999;
 }
 #messenger-widget > div {
   width: 35px;
