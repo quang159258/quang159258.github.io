@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Dashboard</title>
+    <link rel="icon" type="image/jpg" href="../../Resource/favicon.jpg" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../../JS/JQuery/jquery-3.7.1.min.js"></script>
+
+    <script src="
+https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js
+"></script>
+    <link rel="stylesheet" href="../../CSS/main.css" />
+  </head>
+  <body>
+    <div data-include="../Shared/HeaderLayout.html"></div>
+    <main
+      id="MyBody"
+      class="container-lg p-0"
+      style="background-color: white; height: 500px; flex: 1"
+    >
+      <div style="min-height: 10000px" class="w-100 mb-5">
+        <div class="container-xl">
+          <ul class="function_container" style="padding: 0 0">
+            <li class="function_item">
+              <a href=""
+                ><i class="fa-solid fa-bell w-100"></i>Danh sách thông báo</a
+              >
+            </li>
+            <li class="function_item">
+              <a href="#"
+                ><i class="fa-solid fa-book-open-reader w-100"></i>Danh sách tài
+                liệu</a
+              >
+            </li>
+            <li class="function_item">
+              <a href=""
+                ><i class="fa-solid fa-book w-100"></i>Danh sách bài học</a
+              >
+            </li>
+            <li class="function_item">
+              <a href="#"
+                ><i class="fa-solid fa-users w-100"></i>Danh sách người dùng</a
+              >
+            </li>
+            <li class="function_item">
+              <a href="#"
+                ><i class="fa-solid fa-trophy w-100"></i>Danh sách thành tựu</a
+              >
+            </li>
+            <li class="function_item">
+              <a href="#"
+                ><i class="fa-solid fa-book-open-reader w-100"></i>Danh sách bài
+                kiểm tra</a
+              >
+            </li>
+            <li class="function_item">
+              <a href="#"
+                ><i class="fa-solid fa-book-open-reader w-100"></i>Danh sách câu
+                hỏi</a
+              >
+            </li>
+          </ul>
+          <div class="row">
+            <div class="col list_container">
+              <p>Danh sách bài học</p>
+            </div>
+            <div class="col list_container">
+              <p>Danh sách thông báo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"
+      ></script>
+      <a
+        id="messenger-widget"
+        href="https://m.me/100094273371228"
+        target="_blank"
+        ><div></div
+      ></a>
+      <link rel="stylesheet" href="../../CSS/responsive.css" />
+    </main>
+    <script src="../../JS/Homepage.js"></script>
+    <script src="../../JS/FetchLayout.js"></script>
+    <script src="../../JS/API.js"></script>
+    <script>
+      SetMarginTop("Main_Nav", "Sub_Nav", "MyBody");
+    </script>
+  </body>
+</html>

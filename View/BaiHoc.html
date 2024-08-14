@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title></title>
+    <link rel="icon" type="image/jpg" href="../Resource/favicon.jpg" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../JS/JQuery/jquery-3.7.1.min.js"></script>
+
+    <link rel="stylesheet" href="../CSS/main.css" />
+  </head>
+  <body>
+    <div data-include="../Shared/HeaderLayout.html"></div>
+    <main
+      id="MyBody"
+      class="container-lg p-0"
+      style="background-color: white; height: 500px; flex: 1"
+    >
+      <div style="min-height: 100px" class="w-100 mb-5">
+        <div class="w-100">
+          <div
+            class="offcanvas offcanvas-start"
+            data-bs-scroll="false"
+            tabindex="-1"
+            id="offcanvas"
+            aria-labelledby="offcanvasLabel"
+            style="width: 300px"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasLabel">
+                Danh sách bài học
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="lesson" style="width: 100%; margin-bottom: 20px">
+                <li
+                  class="lesson-item"
+                  style="padding: 5px 14px; font-weight: 500; font-size: 1.2rem"
+                ></li>
+              </ul>
+            </div>
+          </div>
+          <button onclick="topFunction()" id="myFixedBtn" title="Go to top">
+            <i class="fa-solid fa-chevron-up"></i>
+          </button>
+          <button
+            class="btn"
+            id="myLisBtn"
+            style="background-color: white; border-radius: 0; z-index: 999"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvas"
+            aria-controls="offcanvas"
+          >
+            <i class="fa-solid fa-list"></i>
+          </button>
+
+          <div
+            id="pdf_container"
+            class="container-lg text-center bg-light p-0"
+          ></div>
+
+          <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"
+          ></script>
+          <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf_viewer.min.css"
+            rel="stylesheet"
+            type="text/css"
+          />
+        </div>
+      </div>
+    </main>
+    <div data-include="../Shared/FooterLayout.html"></div>
+
+    <script src="../JS/FetchLayout.js"></script>
+    <script src="../JS/API.js"></script>
+    <script src="../JS/PDF/PDF.js"></script>
+    <script src="../JS/BaiHoc.js"></script>
+  </body>
+</html>

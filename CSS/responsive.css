@@ -1,0 +1,100 @@
+@media (max-width: 575.98px) {
+  /* CSS áp dụng cho điện thoại di động */
+  * {
+    font-size: 12px;
+  }
+  #LoginContainer {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100% !important;
+  }
+  #Main_Nav span {
+    display: none;
+  }
+  .fc-timeGridWeek-view.fc-view.fc-timegrid {
+    overflow-x: scroll;
+  }
+  #carouselIntroduction .carousel-item img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: 0 -20px;
+    object-position: 0 -20px;
+  }
+  #carouselIntroduction {
+    height: 200px;
+  }
+  @media (orientation: landscape) {
+    #carouselIntroduction .carousel-item img {
+      -o-object-fit: contain;
+      object-fit: contain;
+      -o-object-position: 0 -100px;
+      object-position: 0 -100px;
+    }
+  }
+  .card {
+    width: 40%;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* CSS áp dụng cho máy tính bảng */
+  #Main_Nav span {
+    display: none;
+  }
+  .card {
+    width: 40%;
+  }
+  #carouselIntroduction .carousel-item img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: 0 -100px;
+    object-position: 0 -100px;
+  }
+  #carouselIntroduction {
+    height: 300px;
+  }
+  .fc-timeGridWeek-view.fc-view.fc-timegrid {
+    overflow-x: scroll;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* CSS áp dụng cho máy tính xách tay và máy tính bảng lớn */
+  #Main_Nav span {
+    display: none;
+  }
+  #carouselIntroduction .carousel-item img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: 0 -200px;
+    object-position: 0 -200px;
+  }
+  #carouselIntroduction {
+    height: 300px;
+  }
+  .fc-timeGridWeek-view.fc-view.fc-timegrid {
+    overflow-x: scroll;
+  }
+  .card {
+    width: 40%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #carouselIntroduction .carousel-item img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: 0 -200px;
+    object-position: 0 -200px;
+  }
+  .card {
+    width: 25%;
+  }
+  /* CSS áp dụng cho máy tính cá nhân */
+}
+@media (min-width: 1200px) {
+  /* CSS áp dụng cho máy tính cá nhân và màn hình lớn */
+  .card {
+    width: 25%;
+  }
+  #carouselNotification {
+    aspect-ratio: 16/9;
+  }
+}
