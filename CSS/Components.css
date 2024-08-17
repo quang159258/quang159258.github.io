@@ -161,3 +161,13 @@ div.carousel-item > div {
   -ms-transform: translate(50%, 50%);
   transform: translate(50%, 50%);
 }
+.ListLessons {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 992px) {
+  .ListLessons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -46,6 +46,7 @@ function RenderPages(pdf_container, start, end) {
 function RenderPage(pdf_container, num, currentPage) {
   pdfDoc.getPage(num).then(function (page) {
     // Tạo Canvas và Text Layer container
+    debugger;
     var canvas = document.createElement("canvas");
     canvas.classList.add("PDF");
     var textLayerDiv = document.createElement("div");
@@ -86,8 +87,9 @@ function RenderPage(pdf_container, num, currentPage) {
         pdfjsLib.renderTextLayer({
           textContentSource: textContent,
           container: textLayerDiv,
-          viewport: viewport,
+          viewport: 1,
           textDivs: [],
+          enhanceTextSelection: true,
         });
       });
   });

@@ -366,3 +366,12 @@ iframe {
   -webkit-animation: vibrate-1 0.3s linear infinite both;
   animation: vibrate-1 0.3s linear infinite both;
 }
+#pdf_container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  background-color: #f8f9fa;
+  padding: 0;
+  text-align: center;
+}

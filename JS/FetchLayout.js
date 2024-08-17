@@ -42,7 +42,7 @@ async function FetchKhoahoc() {
 
   data.forEach(item => {
     const colDiv = document.createElement("div");
-    colDiv.className = "mx-4 my-3 Listlesson-box card";
+    colDiv.className = "Listlesson-box card";
     colDiv.setAttribute("id", item.id);
 
     colDiv.innerHTML = `
@@ -190,7 +190,7 @@ async function FetchThuVien(data) {
 
   data.data.forEach(item => {
     const colDiv = document.createElement("div");
-    colDiv.className = "mx-4 my-3 Listlesson-box card";
+    colDiv.className = "Listlesson-box card";
     colDiv.setAttribute("id", item.id);
 
     colDiv.innerHTML = `
