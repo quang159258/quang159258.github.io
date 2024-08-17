@@ -38,58 +38,34 @@ async function LoadPdfFromUrl(DriveId, start, end) {
 }
 function RenderPages(pdf_container, start, end) {
   for (var i = start; i <= end && i <= pdfDoc.numPages; i++) {
-    RenderPage(pdf_container, i, CurrentPage);
+    RenderPage(pdf_container, i);
     CurrentPage++;
   }
 }
-
-function RenderPage(pdf_container, num, currentPage) {
+function RenderPage(pdf_container, num) {
   pdfDoc.getPage(num).then(function (page) {
-    // Tạo Canvas và Text Layer container
+    // Create Canvas
     var canvas = document.createElement("canvas");
     canvas.classList.add("PDF");
-    var textLayerDiv = document.createElement("div");
-
-    canvas.id = "pdf-" + currentPage;
-    textLayerDiv.className = "textLayer";
-    textLayerDiv.classList.add("PDF");
-    textLayerDiv.style.height = "auto";
-    textLayerDiv.style.width = "auto";
-    textLayerDiv.style.position = "absolute";
+    canvas.id = "pdf-" + num;
 
     var ctx = canvas.getContext("2d");
     pdf_container.appendChild(canvas);
-    pdf_container.appendChild(textLayerDiv);
 
+    // Calculate the scale based on the container width
     var scale = pdf_container.clientWidth / page.getViewport({scale: 1}).width;
-    // Set kích thước Canvas dựa trên ViewPort và Scale
+
+    // Set Canvas dimensions based on the scaled viewport
     var viewport = page.getViewport({scale: scale});
     canvas.height = resolution * viewport.height;
     canvas.width = resolution * viewport.width;
-    textLayerDiv.style.height = canvas.height + "px";
-    textLayerDiv.style.width = canvas.width + "px";
-    textLayerDiv.style.top = canvas.offsetTop + "px";
-    textLayerDiv.style.left = canvas.offsetLeft + "px";
 
-    // Render trang PDF
+    // Render the PDF page onto the canvas
     var renderContext = {
       canvasContext: ctx,
       viewport: viewport,
     };
-    page
-      .render(renderContext)
-      .promise.then(function () {
-        // Render lớp văn bản
-        return page.getTextContent();
-      })
-      .then(function (textContent) {
-        pdfjsLib.renderTextLayer({
-          textContentSource: textContent,
-          container: textLayerDiv,
-          viewport: 1,
-          textDivs: [],
-          enhanceTextSelection: true,
-        });
-      });
+
+    page.render(renderContext);
   });
 }
