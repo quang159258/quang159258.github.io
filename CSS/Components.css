@@ -28,6 +28,8 @@ div.carousel-item > div {
   left: 0;
   font-weight: 900;
   top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 .Container_ListLesson {
@@ -43,8 +45,14 @@ div.carousel-item > div {
 }
 .card:hover {
   cursor: pointer;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
   transform: scale(1.1);
+  -webkit-transition: -webkit-transform 0.15s ease-in-out;
+  transition: -webkit-transform 0.15s ease-in-out;
+  -o-transition: transform 0.15s ease-in-out;
   transition: transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
 }
 .card > * {
   border-radius: 0;
@@ -56,6 +64,7 @@ div.carousel-item > div {
 .card-text {
   font-weight: bolder;
   white-space: nowrap;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -67,6 +76,24 @@ div.carousel-item > div {
   width: 100%;
   height: 100%;
   z-index: 0;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(white),
+    color-stop(rgba(219, 37, 53, 0.65)),
+    color-stop(rgba(219, 37, 53, 0.65)),
+    color-stop(rgba(219, 37, 53, 0.65)),
+    to(white)
+  );
+  background-image: -o-linear-gradient(
+    top,
+    white,
+    rgba(219, 37, 53, 0.65),
+    rgba(219, 37, 53, 0.65),
+    rgba(219, 37, 53, 0.65),
+    white
+  );
   background-image: linear-gradient(
     to bottom,
     white,

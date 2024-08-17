@@ -6,6 +6,8 @@
   min-height: 600px;
   background-color: #fff;
   border-radius: 10px;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2),
+    0 10px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
@@ -31,9 +33,18 @@
   height: 100%;
   background-color: #fff;
   padding: 0 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   text-align: center;
 }
@@ -54,6 +65,8 @@
   text-transform: uppercase;
 }
 .button:active {
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
   transform: scale(0.95);
 }
 .button:focus {
@@ -76,16 +89,31 @@
   top: 0;
   left: 50%;
   overflow: hidden;
+  -webkit-transition: -webkit-transform 0s;
+  transition: -webkit-transform 0s;
+  -o-transition: transform 0s;
   transition: transform 0s;
+  transition: transform 0s, -webkit-transform 0s;
 }
 .overlay {
   position: relative;
   height: 100%;
   width: 200%;
   left: -100%;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#0094ff),
+      to(#0094ff)
+    )
+    no-repeat 0 0;
+  background: -o-linear-gradient(left, #0094ff, #0094ff) no-repeat 0 0;
   background: linear-gradient(to right, #0094ff, #0094ff) no-repeat 0 0;
   background-size: cover;
   color: #fff;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
   transform: translateY(0);
 }
 .overlay-panel {
@@ -93,36 +121,61 @@
   top: 0;
   height: 100%;
   width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 0 40px;
   text-align: center;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
   transform: translateY(0);
 }
 .overlay-right {
   right: 0;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
   transform: translateY(0);
 }
 .overlay-left {
+  -webkit-transform: translateY(-20%);
+  -ms-transform: translateY(-20%);
   transform: translateY(-20%);
 }
 #form-container.right-panel-active #LoginContainer {
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
   transform: translateY(100%);
 }
 #form-container.right-panel-active .overlay-container {
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 #form-container.right-panel-active #SignUpContainer {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
   transform: translateX(100%);
   opacity: 1;
   z-index: 5;
 }
 #form-container.right-panel-active .overlay {
+  -webkit-transform: translateX(50%);
+  -ms-transform: translateX(50%);
   transform: translateX(50%);
 }
 #form-container.right-panel-active .overlay-right {
+  -webkit-transform: translateY(20%);
+  -ms-transform: translateY(20%);
   transform: translateY(20%);
 }
 
