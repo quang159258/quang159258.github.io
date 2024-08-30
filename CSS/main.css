@@ -375,3 +375,108 @@ iframe {
   padding: 0;
   text-align: center;
 }
+.frameborder {
+  --blur: 2px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  background: black;
+  background-image: -o-linear-gradient(bottom left, #5d5d5b, #383838);
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    right top,
+    from(#5d5d5b),
+    to(#383838)
+  );
+  background-image: linear-gradient(to top right, #5d5d5b, #383838);
+  padding: 7px;
+  width: 100%;
+  -webkit-box-shadow: -1px 1px var(--blur) 1px rgba(0, 0, 0, 0.1),
+    -2px 2px var(--blur) 1px rgba(0, 0, 0, 0.09),
+    -3px 3px var(--blur) 1px rgba(0, 0, 0, 0.08),
+    -4px 4px var(--blur) 1px rgba(0, 0, 0, 0.07),
+    -5px 5px var(--blur) 1px rgba(0, 0, 0, 0.06),
+    -6px 6px var(--blur) 1px rgba(0, 0, 0, 0.05),
+    -7px 7px var(--blur) 1px rgba(0, 0, 0, 0.04),
+    -8px 8px var(--blur) 1px rgba(0, 0, 0, 0.03),
+    -9px 9px var(--blur) 1px rgba(0, 0, 0, 0.03),
+    -10px 10px var(--blur) 1px rgba(0, 0, 0, 0.03),
+    -11px 11px var(--blur) 1px rgba(0, 0, 0, 0.03),
+    -12px 12px var(--blur) 1px rgba(0, 0, 0, 0.02),
+    -13px 13px var(--blur) 1px rgba(0, 0, 0, 0.02),
+    -14px 14px var(--blur) 1px rgba(0, 0, 0, 0.01),
+    -15px 15px var(--blur) 1px rgba(0, 0, 0, 0.01),
+    -16px 16px var(--blur) 1px rgba(0, 0, 0, 0.01);
+  box-shadow: -1px 1px var(--blur) 1px rgba(0, 0, 0, 0.1),
+    -2px 2px var(--blur) 1px rgba(0, 0, 0, 0.09),
+    -3px 3px var(--blur) 1px rgba(0, 0, 0, 0.08),
+    -4px 4px var(--blur) 1px rgba(0, 0, 0, 0.07),
+    -5px 5px var(--blur) 1px rgba(0, 0, 0, 0.06),
+    -6px 6px var(--blur) 1px rgba(0, 0, 0, 0.05),
+    -7px 7px var(--blur) 1px rgba(0, 0, 0, 0.04),
+    -8px 8px var(--blur) 1px rgba(0, 0, 0, 0.03),
+    -9px 9px var(--blur) 1px rgba(0, 0, 0, 0.03),
+    -10px 10px var(--blur) 1px rgba(0, 0, 0, 0.03),
+    -11px 11px var(--blur) 1px rgba(0, 0, 0, 0.03),
+    -12px 12px var(--blur) 1px rgba(0, 0, 0, 0.02),
+    -13px 13px var(--blur) 1px rgba(0, 0, 0, 0.02),
+    -14px 14px var(--blur) 1px rgba(0, 0, 0, 0.01),
+    -15px 15px var(--blur) 1px rgba(0, 0, 0, 0.01),
+    -16px 16px var(--blur) 1px rgba(0, 0, 0, 0.01);
+}
+.frameborder::before {
+  content: " ";
+  display: block;
+  padding-bottom: 140%;
+}
+.frame {
+  left: 3%;
+  top: 2.5%;
+  -webkit-box-shadow: inset -1px 1px 6px 1px rgba(0, 0, 0, 0.24);
+  box-shadow: inset -1px 1px 6px 1px rgba(0, 0, 0, 0.24);
+  width: 94%;
+  height: 95%;
+  background: white;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+}
+.image {
+  -webkit-box-shadow: inset 0 0 1px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 1px 0 rgba(0, 0, 0, 0.2);
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+#Achievement {
+  min-height: 300px;
+  background-size: cover;
+  background-image: url(../Resource/Images/background2.avif);
+  position: relative; /* Ensure that the #Achievement container is positioned */
+}
+#Achievement::before {
+  position: absolute; /* Positioning the pseudo-element absolutely */
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Ensure it is behind other content */
+  background: linear-gradient(
+    to bottom,
+    white 0%,
+    /* Start with white at the top */ rgba(60, 153, 213, 0.3) 30%,
+    /* Light blue at 30% */ rgba(60, 153, 213, 0.65) 50%,
+    /* Semi-transparent blue at 50% */ rgba(60, 153, 213, 0.3) 70%,
+    /* Light blue at 70% */ white 100% /* End with white at the bottom */
+  );
+}

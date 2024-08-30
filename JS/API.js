@@ -5,7 +5,11 @@ async function GetListLesson() {
   var data = await respone.json();
   return data;
 }
-
+async function GetImageCalendar() {
+  const respone = await fetch(LinkScript + "?action=GetImageCalendar");
+  var data = await respone.json();
+  return data;
+}
 async function GetAllLessonbyListId(id) {
   const respone = await fetch(
     LinkScript + "?action=GetAllLessonbyListId&Listid=" + id
@@ -62,6 +66,16 @@ async function GetMaterials(offset) {
 }
 async function GetMaterialbyId(id) {
   const respone = await fetch(LinkScript + "?action=GetMaterialbyId&Id=" + id);
+  var data = await respone.json();
+  return data;
+}
+async function GetImageBanner() {
+  const respone = await fetch(LinkScript + "?action=GetImageBanner");
+  var data = await respone.json();
+  return data;
+}
+async function GetImageThanhTich() {
+  const respone = await fetch(LinkScript + "?action=GetImageThanhTich");
   var data = await respone.json();
   return data;
 }

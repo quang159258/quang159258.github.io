@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
-    <title>Trang chủ</title>
+    <title>Toán NEDU - Luyện thi Toán</title>
     <link rel="icon" type="image/jpg" href="../Resource/favicon.jpg" />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -25,10 +25,59 @@ https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js
       style="background-color: white; height: 500px; flex: 1"
     >
       <div style="min-height: 100px" class="w-100 mb-5">
-        <div data-include="../Components/Carousel_NotificationImg.html"></div>
-        <div class="Calender_container container-xl my-4 p-2">
-          <div id="calendar"></div>
+        <div class="container-lg p-0">
+          <div
+            id="carouselIntroduction"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div id="carouselIndicators" class="carousel-indicators"></div>
+            <div
+              id="carouselInner"
+              class="carousel-inner h-100"
+              style="
+                -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                  rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                  rgba(0, 0, 0, 0.23) 0px 3px 6px;
+              "
+            ></div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselIntroduction"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+                style="border: 2px solid white"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselIntroduction"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+                style="border: 2px solid white"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
+
+        <link rel="stylesheet" href="../CSS/Components.css" />
+        <div class="w-100 h-100" id="Calendar"></div>
+        <img
+          src="../Resource/Images/infor.jpg"
+          alt=""
+          class="img-fluid mx-auto d-block"
+        />
         <div class="w-100 Container_ListLesson d-flex flex-column my-4 p-2">
           <div class="container-md ListLesson_Title my-3 ms-3 ps-5">
             Khóa học Miễn phí
@@ -36,6 +85,23 @@ https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js
           <div class="container-md ListLessons mx-auto"></div>
         </div>
         <div data-include="../Components/Why.html"></div>
+        <div id="Achievement" class="container-fluid pt-3">
+          <h2
+            style="
+              color: #e5db9d;
+              margin-bottom: 30px;
+              text-align: center;
+              text-shadow: 2px 0 #0f2bbd, -2px 0 #0f2bbd, 0 2px #0f2bbd,
+                0 -2px #0f2bbd, 1px 1px #0f2bbd, -1px -1px #0f2bbd,
+                1px -1px #0f2bbd, -1px 1px #0f2bbd;
+              z-index: 2;
+              position: relative;
+            "
+          >
+            THÀNH TÍCH
+          </h2>
+          <div class="w-100 row"></div>
+        </div>
       </div>
     </main>
     <div data-include="../Shared/FooterLayout.html"></div>
@@ -44,8 +110,20 @@ https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js
     <script src="../JS/API.js"></script>
     <script src="../JS/Homepage.js"></script>
     <script>
-      LoadCalendar();
-      FetchKhoahoc();
+      async function initialize() {
+        try {
+          await renderCarousel();
+          await displayImages();
+          await renderAchievements();
+          await FetchKhoahoc();
+        } catch (error) {
+          console.error("Lỗi:", error);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        initialize();
+      });
     </script>
   </body>
 </html>

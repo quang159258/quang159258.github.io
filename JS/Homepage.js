@@ -89,56 +89,14 @@ function DivideEvent(events, dayoffs) {
   return events;
 }
 $(window).on("scroll", ChangeFixedNav2);
-var calendar;
-async function LoadCalendar() {
-  var eventarray = await GetEventCalendar();
-  var dayoffs = GetDayOff(eventarray);
-  eventarray = DivideEvent(eventarray, dayoffs);
-  var calendarEl = document.getElementById("calendar");
-  calendar = new FullCalendar.Calendar(calendarEl, {
-    initialView: "timeGridWeek",
-    aspectRatio: 16 / 9,
-    themeSystem: "bootstrap5",
-    locale: "vi",
-    firstDay: 1,
-    headerToolbar: {
-      center: "",
-      left: "",
-    },
-    buttonText: {
-      today: "Hôm nay",
-      month: "Tháng",
-      week: "Tuần",
-      day: "Ngày",
-      list: "Danh sách",
-    },
-    buttonHints: {
-      today: "Hôm nay",
-      prev: "$0 trước",
-      next: "$0 sau",
-    },
-    events: eventarray,
-    nowIndicator: true,
-    slotMinTime: "17:00:00",
-    slotMaxTime: "21:45:00",
-    slotDuration: "00:30:00",
-    allDaySlot: false, // Ẩn phần sự kiện cả ngày
-    eventTextColor: "#0c4162",
-    eventDidMount: function (info) {
-      var e = info.el.querySelector(".fc-event-title-container");
-      var descriptionElement = document.createElement("div");
-      descriptionElement.innerHTML = info.event.extendedProps.description;
-      descriptionElement.style.fontSize = "0.8rem";
-      e.appendChild(descriptionElement);
-    },
+async function displayImages() {
+  const container = document.getElementById("Calendar");
+  var images = await GetImageCalendar();
+  images.forEach(image => {
+    const img = document.createElement("img");
+    img.src = `data:${image.mimeType};base64,${image.blob}`;
+    img.alt = image.name;
+    img.classList = "img-fluid";
+    container.appendChild(img);
   });
-
-  calendar.render();
-  window.dispatchEvent(new Event("resize"));
-  center = document.querySelectorAll(".fc-toolbar-chunk")[0];
-  var h2Element = document.createElement("div");
-  h2Element.className = "container-md ListLesson_Title my-3 ms-3 ps-5";
-  h2Element.id = "fc-dom-1";
-  h2Element.textContent = "Lịch học hàng tuần";
-  center.appendChild(h2Element);
 }

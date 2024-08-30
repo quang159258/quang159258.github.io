@@ -218,3 +218,193 @@ async function FetchThuVien(data) {
 
   desk.appendChild(fragment);
 }
+async function renderCarousel() {
+  const indicators = document.getElementById("carouselIndicators");
+  const carouselInner = document.getElementById("carouselInner");
+  var images = await GetImageBanner();
+  images.forEach((image, index) => {
+    // Create carousel indicator
+    const indicator = document.createElement("button");
+    indicator.type = "button";
+    indicator.dataset.bsTarget = "#carouselIntroduction";
+    indicator.dataset.bsSlideTo = index;
+    indicator.ariaLabel = `Slide ${index + 1}`;
+    if (index === 0) {
+      indicator.className = "active";
+      indicator.ariaCurrent = "true";
+    }
+    indicators.appendChild(indicator);
+
+    // Create carousel item
+    const carouselItem = document.createElement("div");
+    carouselItem.className = "carousel-item";
+    if (index === 0) {
+      carouselItem.classList.add("active");
+    }
+
+    const img = document.createElement("img");
+    img.src = `data:${image.mimeType};base64,${image.blob}`; // Update based on your image data structure
+    img.className = "w-100";
+    img.alt = "";
+
+    carouselItem.appendChild(img);
+    carouselInner.appendChild(carouselItem);
+  });
+}
+async function renderCarousels() {
+  const ids = [1, 2, 3]; // Example IDs
+  for (const id of ids) {
+    const images = await GetImagesById(id); // Fetch images by ID
+    const carouselContainer = document.getElementById(`carouselArchieve${id}`);
+
+    const indicators = carouselContainer.querySelector(".carousel-indicators");
+    const carouselInner = carouselContainer.querySelector(".carousel-inner");
+
+    images.forEach((image, index) => {
+      const indicator = document.createElement("button");
+      indicator.type = "button";
+      indicator.dataset.bsTarget = `#carouselArchieve${id}`;
+      indicator.dataset.bsSlideTo = index;
+      indicator.ariaLabel = `Slide ${index + 1}`;
+      if (index === 0) {
+        indicator.className = "active";
+        indicator.ariaCurrent = "true";
+      }
+      indicators.appendChild(indicator);
+
+      const carouselItem = document.createElement("div");
+      carouselItem.className = "carousel-item";
+      if (index === 0) {
+        carouselItem.classList.add("active");
+      }
+
+      const img = document.createElement("img");
+      img.src = `data:${image.mimeType};base64,${image.blob}`;
+      img.className = "w-100";
+      img.alt = "";
+
+      carouselItem.appendChild(img);
+      carouselInner.appendChild(carouselItem);
+    });
+  }
+}
+
+async function renderAchievements() {
+  const achievementsData = await GetImageThanhTich();
+  const archiveContainer = document.getElementById("Achievement");
+  const row = archiveContainer.querySelector(".row");
+
+  // Xoá nội dung hiện tại trong container
+  row.innerHTML = "";
+
+  // Duyệt qua dữ liệu và tạo các carousel
+  achievementsData.forEach(({id, images}) => {
+    // Tạo các thành phần carousel mới
+    const carouselContainer = document.createElement("div");
+    carouselContainer.id = `carouselArchieve${id}`;
+    carouselContainer.className = "carousel slide";
+    carouselContainer.dataset.bsRide = "carousel";
+
+    // Tạo phần carousel indicators
+    const indicators = document.createElement("div");
+    indicators.className = "carousel-indicators";
+
+    // Tạo phần carousel inner
+    const carouselInner = document.createElement("div");
+    carouselInner.className = "carousel-inner h-100";
+
+    // Tạo các chỉ báo (indicators) và nội dung carousel
+    images.forEach((image, index) => {
+      // Tạo indicators
+      const indicator = document.createElement("button");
+      indicator.type = "button";
+      indicator.dataset.bsTarget = `#carouselArchieve${id}`;
+      indicator.dataset.bsSlideTo = index;
+      indicator.ariaLabel = `Slide ${index + 1}`;
+      if (index === 0) {
+        indicator.className = "active";
+        indicator.ariaCurrent = "true";
+      }
+      indicators.appendChild(indicator);
+
+      // Tạo carousel item
+      const carouselItem = document.createElement("div");
+      carouselItem.className = "carousel-item";
+      if (index === 0) {
+        carouselItem.classList.add("active");
+      }
+
+      // Tạo phần frameborder
+      const frameborder = document.createElement("div");
+      frameborder.className = "frameborder";
+
+      // Tạo phần frame
+      const frame = document.createElement("div");
+      frame.className = "frame";
+
+      // Tạo phần img
+      const img = document.createElement("img");
+      img.src = `data:${image.mimeType};base64,${image.blob}`;
+      img.className = "image";
+      img.alt = image.name || "Achievement Image";
+
+      // Thêm img vào frame, frame vào frameborder
+      frame.appendChild(img);
+      frameborder.appendChild(frame);
+
+      // Thêm frameborder vào carouselItem
+      carouselItem.appendChild(frameborder);
+
+      // Thêm carouselItem vào carouselInner
+      carouselInner.appendChild(carouselItem);
+    });
+
+    // Tạo các nút điều khiển (controls)
+    const prevControl = document.createElement("button");
+    prevControl.className = "carousel-control-prev";
+    prevControl.type = "button";
+    prevControl.dataset.bsTarget = `#carouselArchieve${id}`;
+    prevControl.dataset.bsSlide = "prev";
+
+    const prevIcon = document.createElement("span");
+    prevIcon.className = "carousel-control-prev-icon";
+    prevIcon.ariaHidden = "true";
+    prevIcon.style.border = "2px solid white";
+    prevControl.appendChild(prevIcon);
+
+    const prevText = document.createElement("span");
+    prevText.className = "visually-hidden";
+    prevText.textContent = "Previous";
+    prevControl.appendChild(prevText);
+
+    const nextControl = document.createElement("button");
+    nextControl.className = "carousel-control-next";
+    nextControl.type = "button";
+    nextControl.dataset.bsTarget = `#carouselArchieve${id}`;
+    nextControl.dataset.bsSlide = "next";
+
+    const nextIcon = document.createElement("span");
+    nextIcon.className = "carousel-control-next-icon";
+    nextIcon.ariaHidden = "true";
+    nextIcon.style.border = "2px solid white";
+    nextControl.appendChild(nextIcon);
+
+    const nextText = document.createElement("span");
+    nextText.className = "visually-hidden";
+    nextText.textContent = "Next";
+    nextControl.appendChild(nextText);
+
+    // Thêm các phần tử vào carousel container
+    carouselContainer.appendChild(indicators);
+    carouselContainer.appendChild(carouselInner);
+    carouselContainer.appendChild(prevControl);
+    carouselContainer.appendChild(nextControl);
+
+    // Chèn carousel vào DOM
+    const col = document.createElement("div");
+    col.className = "col-md-5 col-9 col-sm-5 mb-3 mx-auto";
+    col.appendChild(carouselContainer);
+
+    row.appendChild(col);
+  });
+}
